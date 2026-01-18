@@ -1,5 +1,149 @@
 .
-├── android -> package/android
+├── android
+│   ├── build.gradle
+│   ├── CMakeLists.txt
+│   ├── .editorconfig
+│   ├── gradle
+│   │   └── wrapper
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── .project
+│   ├── README.md
+│   ├── .settings
+│   │   └── org.eclipse.buildship.core.prefs
+│   ├── settings.gradle
+│   └── src
+│       ├── hasNamespace
+│       │   └── AndroidManifest.xml
+│       └── main
+│           ├── AndroidManifest.xml
+│           ├── cpp
+│           │   ├── frameprocessors
+│           │   │   ├── FrameHostObject.cpp
+│           │   │   ├── FrameHostObject.h
+│           │   │   ├── FrameProcessorPluginHostObject.cpp
+│           │   │   ├── FrameProcessorPluginHostObject.h
+│           │   │   ├── java-bindings
+│           │   │   │   ├── JFrame.cpp
+│           │   │   │   ├── JFrame.h
+│           │   │   │   ├── JFrameProcessor.cpp
+│           │   │   │   ├── JFrameProcessor.h
+│           │   │   │   ├── JFrameProcessorPlugin.cpp
+│           │   │   │   ├── JFrameProcessorPlugin.h
+│           │   │   │   ├── JJSUnionValue.h
+│           │   │   │   ├── JOrientation.h
+│           │   │   │   ├── JPixelFormat.h
+│           │   │   │   ├── JSharedArray.cpp
+│           │   │   │   ├── JSharedArray.h
+│           │   │   │   ├── JVisionCameraProxy.cpp
+│           │   │   │   ├── JVisionCameraProxy.h
+│           │   │   │   ├── JVisionCameraScheduler.cpp
+│           │   │   │   └── JVisionCameraScheduler.h
+│           │   │   ├── JSIJNIConversion.cpp
+│           │   │   ├── JSIJNIConversion.h
+│           │   │   ├── VisionCameraProxy.cpp
+│           │   │   └── VisionCameraProxy.h
+│           │   ├── MutableJByteBuffer.cpp
+│           │   ├── MutableJByteBuffer.h
+│           │   ├── MutableRawBuffer.h
+│           │   └── VisionCamera.cpp
+│           └── java
+│               └── com
+│                   └── mrousavy
+│                       └── camera
+│                           ├── core
+│                           │   ├── CameraConfiguration.kt
+│                           │   ├── CameraDeviceDetails.kt
+│                           │   ├── CameraError.kt
+│                           │   ├── CameraQueues.kt
+│                           │   ├── CameraSession+Configuration.kt
+│                           │   ├── CameraSession+Focus.kt
+│                           │   ├── CameraSession.kt
+│                           │   ├── CameraSession+Photo.kt
+│                           │   ├── CameraSession+Video.kt
+│                           │   ├── CodeScannerFrame.kt
+│                           │   ├── CodeScannerPipeline.kt
+│                           │   ├── extensions
+│                           │   │   ├── CameraInfo+id.kt
+│                           │   │   ├── CameraSelector+byId.kt
+│                           │   │   ├── CameraSelector+withExtension.kt
+│                           │   │   ├── DynamicRange+isSDR.kt
+│                           │   │   ├── ImageAnalysis.Builder+setTargetFrameRate.kt
+│                           │   │   ├── ImageCapture+takePicture.kt
+│                           │   │   ├── ListenableFuture+await.kt
+│                           │   │   ├── ResolutionSelector+forSize.kt
+│                           │   │   ├── Size+aspectRatio.kt
+│                           │   │   ├── StateError+toCameraError.kt
+│                           │   │   └── VideoRecordEvent+toCameraError.kt
+│                           │   ├── FrameProcessorPipeline.kt
+│                           │   ├── MetadataProvider.kt
+│                           │   ├── OrientationManager.kt
+│                           │   ├── Photo.kt
+│                           │   ├── types
+│                           │   │   ├── AutoFocusSystem.kt
+│                           │   │   ├── CameraDeviceFormat.kt
+│                           │   │   ├── CodeScannerOptions.kt
+│                           │   │   ├── CodeType.kt
+│                           │   │   ├── DeviceType.kt
+│                           │   │   ├── Flash.kt
+│                           │   │   ├── .gitattributes
+│                           │   │   ├── HardwareLevel.kt
+│                           │   │   ├── JSUnionValue.kt
+│                           │   │   ├── Orientation.kt
+│                           │   │   ├── OutputOrientation.kt
+│                           │   │   ├── PermissionStatus.kt
+│                           │   │   ├── PixelFormat.kt
+│                           │   │   ├── Position.kt
+│                           │   │   ├── PreviewViewType.kt
+│                           │   │   ├── QualityBalance.kt
+│                           │   │   ├── RecordVideoOptions.kt
+│                           │   │   ├── ResizeMode.kt
+│                           │   │   ├── ShutterType.kt
+│                           │   │   ├── TakePhotoOptions.kt
+│                           │   │   ├── TakeSnapshotOptions.kt
+│                           │   │   ├── Torch.kt
+│                           │   │   ├── VideoCodec.kt
+│                           │   │   ├── VideoFileType.kt
+│                           │   │   ├── Video.kt
+│                           │   │   └── VideoStabilizationMode.kt
+│                           │   └── utils
+│                           │       ├── CamcorderProfileUtils.kt
+│                           │       ├── FileUtils.kt
+│                           │       ├── ImageFormatUtils.kt
+│                           │       ├── OutputFile.kt
+│                           │       └── runOnUiThread.kt
+│                           ├── frameprocessors
+│                           │   ├── Frame.java
+│                           │   ├── FrameProcessor.java
+│                           │   ├── FrameProcessorPlugin.java
+│                           │   ├── FrameProcessorPluginRegistry.java
+│                           │   ├── SharedArray.java
+│                           │   ├── VisionCameraInstaller.java
+│                           │   ├── VisionCameraProxy.kt
+│                           │   └── VisionCameraScheduler.java
+│                           └── react
+│                               ├── CameraDevicesManager.kt
+│                               ├── CameraPackage.kt
+│                               ├── CameraView+Events.kt
+│                               ├── CameraView+Focus.kt
+│                               ├── CameraView.kt
+│                               ├── CameraViewManager.kt
+│                               ├── CameraViewModule.kt
+│                               ├── CameraView+RecordVideo.kt
+│                               ├── CameraView+TakePhoto.kt
+│                               ├── CameraView+TakeSnapshot.kt
+│                               ├── Events.kt
+│                               ├── extensions
+│                               │   ├── List+toJSValue.kt
+│                               │   └── ViewGroup+installHierarchyFitter.kt
+│                               ├── FpsSampleCollector.kt
+│                               └── utils
+│                                   ├── CallbackPromise.kt
+│                                   └── withPromise.kt
+├── apply-foss-patches.sh
 ├── app.plugin.js
 ├── arbo.txt
 ├── bun.lock
@@ -229,6 +373,7 @@
 │   │       └── StatusBarBlurBackground.tsx
 │   └── tsconfig.json
 ├── FOSS_CHANGES.md
+├── FOSS-README.md
 ├── .git
 │   ├── COMMIT_EDITMSG
 │   ├── config
@@ -388,6 +533,7 @@
 │   │   ├── 02
 │   │   │   ├── 069c906500efccab2a03bfedf42757475af012
 │   │   │   ├── 1d8b9997a1a7e8002ac1b5bc2257b541bd8a1b
+│   │   │   ├── 84068182128ec1081474b0e2761a8084ef9a3b
 │   │   │   └── f72ddaf14189cd20f9e2990678e2fb1d3795b6
 │   │   ├── 03
 │   │   │   ├── e89b499bb207a36c469563c8522ff28870072a
@@ -397,7 +543,10 @@
 │   │   │   └── 3f950ded6d1934dc056a9d3917d2252497cdc2
 │   │   ├── 0a
 │   │   │   ├── 00e279249210020dc6eca06accd7ba39a03b2b
-│   │   │   └── 6c20fc45fa5e36c9956a049eb8818f1c7533ad
+│   │   │   ├── 6c20fc45fa5e36c9956a049eb8818f1c7533ad
+│   │   │   ├── 83d377686b2e033a6fc49a4ada4371a6f9ffab
+│   │   │   ├── d7e7f35ac52ffbc21df209156152a89e226530
+│   │   │   └── e6b9c120608c03d53482d5bcef7b0a25432063
 │   │   ├── 0c
 │   │   │   └── a143bab5402781fc58c0a4e54b8bebeba05299
 │   │   ├── 10
@@ -414,8 +563,10 @@
 │   │   │   └── 7c3ac40d0e421a78bf292ba7681788035285b5
 │   │   ├── 16
 │   │   │   ├── 9e6a4d9e420ddd86a3c900412a58f3a42fdf29
+│   │   │   ├── b4554011d99eca0b4e69e02a3029fd7f02288e
 │   │   │   └── f28a74e9ceef2861380b3c33ef6696b2a5dd48
 │   │   ├── 17
+│   │   │   ├── 4bcbfaff6f2ce22ded77454779d9e1932f5f28
 │   │   │   ├── 76104eb7cff4c2164b7ce69530cf0b7177e1bb
 │   │   │   ├── a1026bb52e276800ff23e166683685e344575d
 │   │   │   └── b973969a2a62b0ecdc6fe04f61da465e991814
@@ -434,6 +585,8 @@
 │   │   │   └── eb4f109220bdd981cce0d479a6af03410ff42e
 │   │   ├── 1d
 │   │   │   └── f8bc87071278d0cfd9b648572e428b07471e60
+│   │   ├── 1e
+│   │   │   └── b236cea6f2d389ebfa016adea2e15320904464
 │   │   ├── 20
 │   │   │   ├── 1f60f8a0863129859a750a10a9f3c7652f2601
 │   │   │   ├── 3dd8ea9fe2aca60ad29f857fd2474ba83735e3
@@ -443,8 +596,10 @@
 │   │   │   ├── 9b1ca1c14a1d8f19292d3957c9ccf110a103b1
 │   │   │   └── cda79b1e2168f40af4bbeabde1964ffb4019a6
 │   │   ├── 22
+│   │   │   ├── 397ce28e88c4b82d322351e8623215fa8074a0
 │   │   │   └── b6a3640896cdfd5fd90a64182b3a5f5fcf5d1f
 │   │   ├── 24
+│   │   │   ├── 48cc90c9dd223133c74942d8c6d03438aacadb
 │   │   │   └── 8b9cd96be8f373de7a0a8507a731978f510ba8
 │   │   ├── 25
 │   │   │   ├── 05d6863950559284e9b54434cfd11feb4cd7fb
@@ -466,10 +621,14 @@
 │   │   │   └── 9bdeaa2a50226aa5eea90af964ffcaf2804724
 │   │   ├── 2e
 │   │   │   ├── 4c2f26d41b3db7863a42fcb50798b48275281a
+│   │   │   ├── 71a5a56ff14abd0de1b8127fa03bd2eda5cbe1
 │   │   │   └── 96c91d4eae1201af658d84aed8f851b9f948c7
+│   │   ├── 30
+│   │   │   └── 10f63cc1f82d2d3a39386387569aed06426b0d
 │   │   ├── 31
 │   │   │   ├── 1273e7004976e60dc7716a09b881394134f9d3
-│   │   │   └── 34f209ea37a4065d8f1bc159b4706bad8a9380
+│   │   │   ├── 34f209ea37a4065d8f1bc159b4706bad8a9380
+│   │   │   └── 87f7cb172db031b521c188993a05fbb87e3e49
 │   │   ├── 32
 │   │   │   ├── 24115493dfee0b04a5e88f08e297fb7bf7fd66
 │   │   │   └── e067e0c1f7bf401ec9253b2791d50526eae7c7
@@ -494,10 +653,12 @@
 │   │   ├── 37
 │   │   │   └── 6fb39464fe6846f3077799fa2d85b25565b6e6
 │   │   ├── 38
+│   │   │   ├── 6a80e95e650494a48f1666ed1d4941a49180c3
 │   │   │   ├── 8ad6fee896333f58cd51104efd35bdf340ec51
 │   │   │   ├── 9ea6fee6dc96900dfca1ecb1fe23893b63902f
 │   │   │   └── cf41deec368b93c62204ddb17cdcee0a4d1768
 │   │   ├── 39
+│   │   │   ├── 1173e17ac17aa4bcb69b60bb11707ee7717c46
 │   │   │   └── df878b026de702a92eb4276dd81e2ec77a05bc
 │   │   ├── 3a
 │   │   │   └── d8d94f851691ba96bad162f1e0d506e5be2fe0
@@ -516,11 +677,13 @@
 │   │   ├── 43
 │   │   │   ├── 3557fb6df7331797eaba62b050c1d92622d686
 │   │   │   ├── 8af0a9250cdde08da15b643dbe0190ce0211fa
-│   │   │   └── bdb8a37c084063b8e62c01cbf0238cdd679d84
+│   │   │   ├── bdb8a37c084063b8e62c01cbf0238cdd679d84
+│   │   │   └── e07e1b2a24d9912fa830f432f36a366ff5f3b3
 │   │   ├── 44
 │   │   │   ├── bdf60bed414e0bcc060798a77d96061e9f5705
 │   │   │   └── cb51f0a5196698b84ccb13440e820f95b9f2ec
 │   │   ├── 46
+│   │   │   ├── 3733c76db62221f537e0a08289ff646ef4cfe1
 │   │   │   └── 39cf3d0ef3184470f884f416c03010084a1951
 │   │   ├── 47
 │   │   │   ├── 392128254f261840934aec0af7a810720871e3
@@ -537,8 +700,10 @@
 │   │   │   ├── 11f43c7d9f09d223d916995821f6b9d35b9f75
 │   │   │   └── 3c5ae6a54a12f8188b6d973876056e39bacfd3
 │   │   ├── 4e
-│   │   │   └── 18aeaa6d6b2940d5bbb5dedffca0397a96cd54
+│   │   │   ├── 18aeaa6d6b2940d5bbb5dedffca0397a96cd54
+│   │   │   └── c6bd4408fbb68b2fe592ca409dc828d2ac5452
 │   │   ├── 50
+│   │   │   ├── 31660a491d0731ef7a3807898c02a23e0ca65c
 │   │   │   └── 7870b97e35e05265af6749566d379cd2cba9b0
 │   │   ├── 51
 │   │   │   ├── 479b475913364720c14442894990b641c3232e
@@ -563,6 +728,7 @@
 │   │   │   └── d40d95bab9cd660d17877221e3110e9e8499e4
 │   │   ├── 5a
 │   │   │   ├── 23a3a3142e2e898320503980cf32bb22fef97f
+│   │   │   ├── 29b24a2e2cd7242bba1431e58f87b7764b9717
 │   │   │   ├── 4eaf71400c2762a3b449d85c0cd987cea18d9b
 │   │   │   └── 98a79fcaa8133b5626a84a70b11abbc9a9829c
 │   │   ├── 5c
@@ -585,7 +751,8 @@
 │   │   │   ├── 97ede5df7d44e89f8c75e225d5c84554813abd
 │   │   │   └── d69c12f09615a0e9e0a326060f6b41f51ca889
 │   │   ├── 64
-│   │   │   └── 2c69e3f095c7740f32c557d3d3a88c70fb8e89
+│   │   │   ├── 2c69e3f095c7740f32c557d3d3a88c70fb8e89
+│   │   │   └── 55f121e1ba06c03e35cb8acaf628f089d10232
 │   │   ├── 65
 │   │   │   ├── 0ca4df9bdcd9007954ef1c3af1e3a80d8e4dad
 │   │   │   ├── 1d6d9718c790b0921f546c1f56473a0dad7c52
@@ -627,6 +794,7 @@
 │   │   ├── 78
 │   │   │   ├── 41f7d1465a18755a81cc5364c20bf6ca649e53
 │   │   │   ├── 6f094bb681b346b74247b9235e4e4a84843c5c
+│   │   │   ├── aabc0c2a9e7a05840b648db43c1ee73a8de74b
 │   │   │   └── eb73f489460f623cf746a9e81dc0370b9336fc
 │   │   ├── 79
 │   │   │   ├── ae3bace5bb1edd120620fe723d698d3a7e91b1
@@ -656,6 +824,7 @@
 │   │   │   └── e49ca1d71a1c7f55c92d6ce7f1e87567bdd420
 │   │   ├── 89
 │   │   │   ├── 5b1cac5157b2946586c2cca1ab7f7836ecbcbd
+│   │   │   ├── 7f59468d81857ca41e9ac8c10dc04c87e32d50
 │   │   │   └── 8b663e99fa0742a4dcb2b334ffcf7d375da5b9
 │   │   ├── 8b
 │   │   │   └── 5da937979126c8928d80027fc45deb83cdfc33
@@ -686,6 +855,8 @@
 │   │   │   └── ec52f7355a10247157d9eb575aa0f82ade8889
 │   │   ├── 97
 │   │   │   └── 168202ed4dbb2584f4a030de3af4bd83a48216
+│   │   ├── 98
+│   │   │   └── 609114eee63aa619823449d8c4e130187d88bc
 │   │   ├── 99
 │   │   │   └── f7ff8d8e665c926758829f8e4bb496084f9ab6
 │   │   ├── 9c
@@ -756,15 +927,18 @@
 │   │   ├── b1
 │   │   │   └── db1d8769a6842de6157ae33cc3211cc9bcf946
 │   │   ├── b6
+│   │   │   ├── 594555d65aa1fc71506c58789f89b0e3833fd9
 │   │   │   └── d348d1252bd633d4b5dcfa7436cfb5452e666d
 │   │   ├── b8
+│   │   │   ├── 0683c0f2c26f89773de843f72d08664c2c5c8c
 │   │   │   ├── 1dc96119ddf168e4f8d77b9f74e08bcd1b1857
 │   │   │   └── c471aae989af46b11442319d3366334ee1831b
 │   │   ├── b9
 │   │   │   └── 4db1abff58d7dbc4a2f4669a6940269242987f
 │   │   ├── bb
 │   │   │   ├── 5ca757315745d53043c307cd9ed67403bd431c
-│   │   │   └── d206917d4cbe8dc24291c3bf4677b34e7bdccc
+│   │   │   ├── d206917d4cbe8dc24291c3bf4677b34e7bdccc
+│   │   │   └── fc11be3986dbae91dbb8117f62279afe417872
 │   │   ├── bf
 │   │   │   ├── 527857fb9057c94e44cb655689d0c8254fd2cc
 │   │   │   ├── bd572faa99f8ce4fb1cd73e9af3592054de7e0
@@ -787,7 +961,8 @@
 │   │   ├── c8
 │   │   │   └── 6b26a3a9698b4df6b73e11cea2c7a51ce5a732
 │   │   ├── c9
-│   │   │   └── 3b22e98d1fcfd717e608f1936800ed543880a4
+│   │   │   ├── 3b22e98d1fcfd717e608f1936800ed543880a4
+│   │   │   └── a51a775ab082fdb097568f040c368f90518b57
 │   │   ├── ca
 │   │   │   ├── c87c91629c5d9022b20762e09eed7198d13837
 │   │   │   └── e95851f535f7cf3594ae4a39c84ace162279d6
@@ -844,6 +1019,7 @@
 │   │   │   ├── 77b8af53344f655a06c5c7680d34cc42664449
 │   │   │   └── 9770756826ecb556cc4fbccafce3825dc366ef
 │   │   ├── e2
+│   │   │   ├── 700adc291f7a4c451c7f8b07d3d02bb8045f12
 │   │   │   └── d56556f6e7b3a3be16908ff20d704f700fa9aa
 │   │   ├── e4
 │   │   │   ├── 90ac0e463e4b6a50ddf17dc24df40ef589e16d
@@ -851,6 +1027,7 @@
 │   │   ├── e5
 │   │   │   └── d7909f4d6d18f67ca7aa0806549d0893801b3e
 │   │   ├── e6
+│   │   │   ├── 1e5b26a985bbfbd015a5c2453c9b69fcc2b0b5
 │   │   │   ├── 4e15e9500909ed25317354a109ef377678e25c
 │   │   │   ├── 974d51f62eab766acb51f4b31fc4526a5f3138
 │   │   │   └── b635ad4705aaa8aa956b0b19cfade62b792e61
@@ -893,7 +1070,8 @@
 │   │   │   ├── 50ed9164d8f6e2df4020dde020db5476053376
 │   │   │   └── ab61bd984f9342a9c464a8ef76cdd39dece832
 │   │   ├── f8
-│   │   │   └── 253365c96a03fcc7dfa408aee06c58bddb33e1
+│   │   │   ├── 253365c96a03fcc7dfa408aee06c58bddb33e1
+│   │   │   └── 386ec0251a7d66a78759ff91c5159ab4b6a787
 │   │   ├── f9
 │   │   │   ├── 2e5dc978b71f23516187a76bfb340c4c8b0aac
 │   │   │   ├── 804fa05dd12657e4812b82d1e0d2ee1569f86a
@@ -1391,9 +1569,255 @@
 │   │                                   └── withPromise.kt
 │   ├── app.plugin.js
 │   ├── babel.config.js
+│   ├── bun.lock
 │   ├── .clang-format
+│   ├── CODE_OF_CONDUCT.md
+│   ├── CONTRIBUTING.md
+│   ├── docs
+│   │   ├── babel.config.js
+│   │   ├── docs
+│   │   │   └── guides
+│   │   │       ├── CODE_SCANNING.mdx
+│   │   │       ├── DEVICES.mdx
+│   │   │       ├── ERRORS.mdx
+│   │   │       ├── EXPOSURE.mdx
+│   │   │       ├── FOCUSING.mdx
+│   │   │       ├── FORMATS.mdx
+│   │   │       ├── FRAME_PROCESSOR_CREATE_FINAL.mdx
+│   │   │       ├── FRAME_PROCESSOR_CREATE_PLUGIN_ANDROID.mdx
+│   │   │       ├── FRAME_PROCESSOR_CREATE_PLUGIN_EXPO.mdx
+│   │   │       ├── FRAME_PROCESSOR_CREATE_PLUGIN_IOS.mdx
+│   │   │       ├── FRAME_PROCESSOR_PLUGINS_COMMUNITY.mdx
+│   │   │       ├── FRAME_PROCESSORS_CREATE_OVERVIEW.mdx
+│   │   │       ├── FRAME_PROCESSORS_CREATE_PLUGIN_CPP.mdx
+│   │   │       ├── FRAME_PROCESSORS_INTERACTING.mdx
+│   │   │       ├── FRAME_PROCESSORS.mdx
+│   │   │       ├── FRAME_PROCESSORS_SKIA.mdx
+│   │   │       ├── FRAME_PROCESSORS_TIPS.mdx
+│   │   │       ├── GETTING_STARTED.mdx
+│   │   │       ├── HDR.mdx
+│   │   │       ├── LIFECYCLE.mdx
+│   │   │       ├── LOCATION.mdx
+│   │   │       ├── MOCKING.mdx
+│   │   │       ├── ORIENTATION.mdx
+│   │   │       ├── PERFORMANCE.mdx
+│   │   │       ├── PIXEL_FORMATS.mdx
+│   │   │       ├── PREVIEW.mdx
+│   │   │       ├── RECORDING_VIDEOS.mdx
+│   │   │       ├── SHADOW_LENS.mdx
+│   │   │       ├── STABILIZATION.mdx
+│   │   │       ├── TAKING_PHOTOS.mdx
+│   │   │       ├── TROUBLESHOOTING.mdx
+│   │   │       └── ZOOMING.mdx
+│   │   ├── docusaurus.config.js
+│   │   ├── .gitattributes
+│   │   ├── .gitignore
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── sidebars.js
+│   │   ├── src
+│   │   │   ├── css
+│   │   │   │   └── custom.css
+│   │   │   └── pages
+│   │   │       ├── index.js
+│   │   │       └── styles.module.css
+│   │   └── static
+│   │       ├── android-chrome-192x192.png
+│   │       ├── android-chrome-512x512.png
+│   │       ├── apple-touch-icon.png
+│   │       ├── favicon-16x16.png
+│   │       ├── favicon-32x32.png
+│   │       ├── favicon.ico
+│   │       ├── google19da0ead7806dbdc.html
+│   │       ├── img
+│   │       │   ├── 11_back.png
+│   │       │   ├── 11.png
+│   │       │   ├── action_mode_demo.gif
+│   │       │   ├── appstore.svg
+│   │       │   ├── banner-dark.png
+│   │       │   ├── banner-light.png
+│   │       │   ├── demo_capture.gif
+│   │       │   ├── demo_drawing.mp4
+│   │       │   ├── demo.gif
+│   │       │   ├── example_error.png
+│   │       │   ├── example_intro.png
+│   │       │   ├── example.png
+│   │       │   ├── exposure-negative.jpg
+│   │       │   ├── exposure-neutral.jpg
+│   │       │   ├── exposure-plus.jpg
+│   │       │   ├── frame.png
+│   │       │   ├── frame-processors.gif
+│   │       │   ├── googleplay.svg
+│   │       │   ├── hdr_comparison.png
+│   │       │   ├── hdr_photo_demo.webp
+│   │       │   ├── location.png
+│   │       │   ├── multi-camera.gif
+│   │       │   ├── sdr_comparison.png
+│   │       │   └── shadowlens_screenshot.png
+│   │       ├── .nojekyll
+│   │       ├── robots.txt
+│   │       └── site.webmanifest
 │   ├── .eslintrc.js
+│   ├── example
+│   │   ├── android
+│   │   │   ├── app
+│   │   │   │   ├── build.gradle
+│   │   │   │   ├── debug.keystore
+│   │   │   │   ├── proguard-rules.pro
+│   │   │   │   └── src
+│   │   │   │       ├── debug
+│   │   │   │       │   └── AndroidManifest.xml
+│   │   │   │       └── main
+│   │   │   │           ├── AndroidManifest.xml
+│   │   │   │           ├── ic_launcher-playstore.png
+│   │   │   │           ├── java
+│   │   │   │           │   └── com
+│   │   │   │           │       └── mrousavy
+│   │   │   │           │           └── camera
+│   │   │   │           │               └── example
+│   │   │   │           │                   ├── ExampleFrameProcessorPlugin.java
+│   │   │   │           │                   ├── ExampleKotlinFrameProcessorPlugin.kt
+│   │   │   │           │                   ├── MainActivity.kt
+│   │   │   │           │                   └── MainApplication.kt
+│   │   │   │           └── res
+│   │   │   │               ├── drawable
+│   │   │   │               │   └── rn_edit_text_material.xml
+│   │   │   │               ├── mipmap-anydpi-v26
+│   │   │   │               │   ├── ic_launcher_round.xml
+│   │   │   │               │   └── ic_launcher.xml
+│   │   │   │               ├── mipmap-hdpi
+│   │   │   │               │   ├── ic_launcher_foreground.png
+│   │   │   │               │   ├── ic_launcher.png
+│   │   │   │               │   └── ic_launcher_round.png
+│   │   │   │               ├── mipmap-mdpi
+│   │   │   │               │   ├── ic_launcher_foreground.png
+│   │   │   │               │   ├── ic_launcher.png
+│   │   │   │               │   └── ic_launcher_round.png
+│   │   │   │               ├── mipmap-xhdpi
+│   │   │   │               │   ├── ic_launcher_foreground.png
+│   │   │   │               │   ├── ic_launcher.png
+│   │   │   │               │   └── ic_launcher_round.png
+│   │   │   │               ├── mipmap-xxhdpi
+│   │   │   │               │   ├── ic_launcher_foreground.png
+│   │   │   │               │   ├── ic_launcher.png
+│   │   │   │               │   └── ic_launcher_round.png
+│   │   │   │               ├── mipmap-xxxhdpi
+│   │   │   │               │   ├── ic_launcher_foreground.png
+│   │   │   │               │   ├── ic_launcher.png
+│   │   │   │               │   └── ic_launcher_round.png
+│   │   │   │               └── values
+│   │   │   │                   ├── ic_launcher_background.xml
+│   │   │   │                   ├── strings.xml
+│   │   │   │                   └── styles.xml
+│   │   │   ├── build.gradle
+│   │   │   ├── gradle
+│   │   │   │   └── wrapper
+│   │   │   │       ├── gradle-wrapper.jar
+│   │   │   │       └── gradle-wrapper.properties
+│   │   │   ├── gradle.properties
+│   │   │   ├── gradlew
+│   │   │   ├── gradlew.bat
+│   │   │   └── settings.gradle
+│   │   ├── app.json
+│   │   ├── babel.config.js
+│   │   ├── clean.sh
+│   │   ├── .eslintrc.js
+│   │   ├── index.js
+│   │   ├── ios
+│   │   │   ├── File.swift
+│   │   │   ├── Frame Processor Plugins
+│   │   │   │   ├── Example Plugin
+│   │   │   │   │   └── ExampleFrameProcessorPlugin.m
+│   │   │   │   └── Example Swift Plugin
+│   │   │   │       ├── ExampleSwiftFrameProcessor.m
+│   │   │   │       └── ExampleSwiftFrameProcessor.swift
+│   │   │   ├── Podfile
+│   │   │   ├── Podfile.lock
+│   │   │   ├── .swift-version
+│   │   │   ├── VisionCameraExample
+│   │   │   │   ├── AppDelegate.h
+│   │   │   │   ├── AppDelegate.mm
+│   │   │   │   ├── Images.xcassets
+│   │   │   │   │   ├── AppIcon.appiconset
+│   │   │   │   │   │   ├── 1024.png
+│   │   │   │   │   │   ├── 114.png
+│   │   │   │   │   │   ├── 120.png
+│   │   │   │   │   │   ├── 180.png
+│   │   │   │   │   │   ├── 29.png
+│   │   │   │   │   │   ├── 40.png
+│   │   │   │   │   │   ├── 57.png
+│   │   │   │   │   │   ├── 58.png
+│   │   │   │   │   │   ├── 60.png
+│   │   │   │   │   │   ├── 80.png
+│   │   │   │   │   │   ├── 87.png
+│   │   │   │   │   │   └── Contents.json
+│   │   │   │   │   ├── Contents.json
+│   │   │   │   │   └── shutter.imageset
+│   │   │   │   │       ├── Contents.json
+│   │   │   │   │       ├── IMG_7966-1.jpg
+│   │   │   │   │       ├── IMG_7966-2.jpg
+│   │   │   │   │       └── IMG_7966.jpg
+│   │   │   │   ├── Info.plist
+│   │   │   │   ├── LaunchScreen.storyboard
+│   │   │   │   ├── main.m
+│   │   │   │   └── PrivacyInfo.xcprivacy
+│   │   │   ├── VisionCameraExample-Bridging-Header.h
+│   │   │   ├── VisionCameraExampleCocoaPodUtils.rb
+│   │   │   ├── VisionCameraExample.xcodeproj
+│   │   │   │   ├── project.pbxproj
+│   │   │   │   └── xcshareddata
+│   │   │   │       └── xcschemes
+│   │   │   │           └── VisionCameraExample.xcscheme
+│   │   │   ├── VisionCameraExample.xcworkspace
+│   │   │   │   ├── contents.xcworkspacedata
+│   │   │   │   └── xcshareddata
+│   │   │   │       └── IDEWorkspaceChecks.plist
+│   │   │   └── .xcode.env
+│   │   ├── metro.config.js
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── App.tsx
+│   │   │   ├── CameraPage.tsx
+│   │   │   ├── CodeScannerPage.tsx
+│   │   │   ├── Constants.ts
+│   │   │   ├── DevicesPage.tsx
+│   │   │   ├── frame-processors
+│   │   │   │   ├── ExampleKotlinSwiftPlugin.ts
+│   │   │   │   └── ExamplePlugin.ts
+│   │   │   ├── hooks
+│   │   │   │   ├── useIsForeground.ts
+│   │   │   │   └── usePreferredCameraDevice.ts
+│   │   │   ├── img
+│   │   │   │   └── 11.png
+│   │   │   ├── MediaPage.tsx
+│   │   │   ├── PermissionsPage.tsx
+│   │   │   ├── Routes.ts
+│   │   │   └── views
+│   │   │       ├── CaptureButton.tsx
+│   │   │       └── StatusBarBlurBackground.tsx
+│   │   └── tsconfig.json
 │   ├── .gitattributes
+│   ├── .github
+│   │   ├── dependabot.yml
+│   │   ├── funding-octocat.svg
+│   │   ├── FUNDING.yml
+│   │   ├── ISSUE_TEMPLATE
+│   │   │   ├── BUG_REPORT.yml
+│   │   │   ├── BUILD_ERROR.yml
+│   │   │   ├── config.yml
+│   │   │   └── FEATURE_REQUEST.yml
+│   │   ├── PULL_REQUEST_TEMPLATE.md
+│   │   └── workflows
+│   │       ├── build-android-release.yml
+│   │       ├── build-android.yml
+│   │       ├── build-ios.yml
+│   │       ├── compress-images.yml
+│   │       ├── update-lockfiles.yml
+│   │       ├── validate-android.yml
+│   │       ├── validate-cpp.yml
+│   │       ├── validate-ios.yml
+│   │       └── validate-js.yml
 │   ├── .gitignore
 │   ├── ios
 │   │   ├── Core
@@ -1856,8 +2280,11 @@
 │   │           ├── TemporaryFile.d.ts.map
 │   │           ├── VideoFile.d.ts
 │   │           └── VideoFile.d.ts.map
+│   ├── LICENSE
 │   ├── package.json
+│   ├── .prettierrc.js
 │   ├── react-native.config.js
+│   ├── README.md
 │   ├── scripts
 │   │   ├── bootstrap.js
 │   │   ├── check-all.sh
@@ -1925,6 +2352,7 @@
 │   │       ├── Snapshot.ts
 │   │       ├── TemporaryFile.ts
 │   │       └── VideoFile.ts
+│   ├── tea.yaml
 │   ├── tsconfig.json
 │   └── VisionCamera.podspec
 ├── package.json
@@ -1935,4 +2363,4 @@
 ├── tea.yaml
 └── VisionCamera.podspec -> package/VisionCamera.podspec
 
-362 directories, 1574 files
+437 directories, 1927 files
