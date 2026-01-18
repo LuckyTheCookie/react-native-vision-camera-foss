@@ -7,9 +7,6 @@
   "types": "package/lib/typescript/index.d.ts",
   "react-native": "package/src/index",
   "private": false,
-  "scripts": {
-    "postinstall": "cd package && (test -d lib || (bun install && bun run build)) || true"
-  },
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
