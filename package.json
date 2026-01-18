@@ -1,6 +1,31 @@
 {
-  "name": "monorepo",
-  "private": true,
+  "name": "react-native-vision-camera",
+  "version": "4.7.3-foss",
+  "description": "A powerful, high-performance React Native Camera library. FOSS version without Google ML Kit.",
+  "main": "package/lib/commonjs/index",
+  "module": "package/lib/module/index",
+  "types": "package/lib/typescript/index.d.ts",
+  "react-native": "package/src/index",
+  "private": false,
+  "scripts": {
+    "postinstall": "cd package && (test -d lib || (bun install && bun run build)) || true"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-worklets-core": "*"
+  },
+  "peerDependenciesMeta": {
+    "react-native-worklets-core": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuckyTheCookie/react-native-vision-camera-foss.git"
+  },
+  "author": "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy), FOSS fork by LuckyTheCookie",
+  "license": "MIT",
   "workspaces": [
     "package",
     "example",
