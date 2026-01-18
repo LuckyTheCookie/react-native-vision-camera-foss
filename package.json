@@ -2,11 +2,28 @@
   "name": "react-native-vision-camera",
   "version": "4.7.3-foss",
   "description": "A powerful, high-performance React Native Camera library. FOSS version without Google ML Kit.",
-  "main": "package/lib/commonjs/index",
-  "module": "package/lib/module/index",
-  "types": "package/lib/typescript/index.d.ts",
-  "react-native": "package/src/index",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index",
   "private": false,
+  "scripts": {
+    "prepare": "bob build"
+  },
+  "keywords": [
+    "react-native",
+    "camera",
+    "vision",
+    "foss",
+    "android",
+    "ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuckyTheCookie/react-native-vision-camera-foss.git"
+  },
+  "author": "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy), FOSS fork by LuckyTheCookie",
+  "license": "MIT",
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
@@ -17,18 +34,49 @@
       "optional": true
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LuckyTheCookie/react-native-vision-camera-foss.git"
+  "devDependencies": {
+    "@react-native/eslint-config": "^0.75.4",
+    "@types/react": "^18.2.6",
+    "eslint": "^8.19.0",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-native": "^0.77.0-rc.0",
+    "react-native-builder-bob": "^0.30.2",
+    "typescript": "^5.6.2"
   },
-  "author": "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy), FOSS fork by LuckyTheCookie",
-  "license": "MIT",
-  "workspaces": [
-    "package",
-    "example",
-    "docs"
-  ],
-  "trustedDependencies": [
-    "react-native-vision-camera"
-  ]
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "codegenConfig": {
+    "name": "VisionCameraSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.mrousavy.camera"
+    },
+    "ios": {
+      "moduleName": "VisionCamera"
+    }
+  }
 }
