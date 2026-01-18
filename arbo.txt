@@ -1,0 +1,1938 @@
+.
+├── android -> package/android
+├── app.plugin.js
+├── arbo.txt
+├── bun.lock
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── docs
+│   ├── babel.config.js
+│   ├── docs
+│   │   └── guides
+│   │       ├── CODE_SCANNING.mdx
+│   │       ├── DEVICES.mdx
+│   │       ├── ERRORS.mdx
+│   │       ├── EXPOSURE.mdx
+│   │       ├── FOCUSING.mdx
+│   │       ├── FORMATS.mdx
+│   │       ├── FRAME_PROCESSOR_CREATE_FINAL.mdx
+│   │       ├── FRAME_PROCESSOR_CREATE_PLUGIN_ANDROID.mdx
+│   │       ├── FRAME_PROCESSOR_CREATE_PLUGIN_EXPO.mdx
+│   │       ├── FRAME_PROCESSOR_CREATE_PLUGIN_IOS.mdx
+│   │       ├── FRAME_PROCESSOR_PLUGINS_COMMUNITY.mdx
+│   │       ├── FRAME_PROCESSORS_CREATE_OVERVIEW.mdx
+│   │       ├── FRAME_PROCESSORS_CREATE_PLUGIN_CPP.mdx
+│   │       ├── FRAME_PROCESSORS_INTERACTING.mdx
+│   │       ├── FRAME_PROCESSORS.mdx
+│   │       ├── FRAME_PROCESSORS_SKIA.mdx
+│   │       ├── FRAME_PROCESSORS_TIPS.mdx
+│   │       ├── GETTING_STARTED.mdx
+│   │       ├── HDR.mdx
+│   │       ├── LIFECYCLE.mdx
+│   │       ├── LOCATION.mdx
+│   │       ├── MOCKING.mdx
+│   │       ├── ORIENTATION.mdx
+│   │       ├── PERFORMANCE.mdx
+│   │       ├── PIXEL_FORMATS.mdx
+│   │       ├── PREVIEW.mdx
+│   │       ├── RECORDING_VIDEOS.mdx
+│   │       ├── SHADOW_LENS.mdx
+│   │       ├── STABILIZATION.mdx
+│   │       ├── TAKING_PHOTOS.mdx
+│   │       ├── TROUBLESHOOTING.mdx
+│   │       └── ZOOMING.mdx
+│   ├── docusaurus.config.js
+│   ├── .gitattributes
+│   ├── .gitignore
+│   ├── package.json
+│   ├── README.md
+│   ├── sidebars.js
+│   ├── src
+│   │   ├── css
+│   │   │   └── custom.css
+│   │   └── pages
+│   │       ├── index.js
+│   │       └── styles.module.css
+│   └── static
+│       ├── android-chrome-192x192.png
+│       ├── android-chrome-512x512.png
+│       ├── apple-touch-icon.png
+│       ├── favicon-16x16.png
+│       ├── favicon-32x32.png
+│       ├── favicon.ico
+│       ├── google19da0ead7806dbdc.html
+│       ├── img
+│       │   ├── 11_back.png
+│       │   ├── 11.png
+│       │   ├── action_mode_demo.gif
+│       │   ├── appstore.svg
+│       │   ├── banner-dark.png
+│       │   ├── banner-light.png
+│       │   ├── demo_capture.gif
+│       │   ├── demo_drawing.mp4
+│       │   ├── demo.gif
+│       │   ├── example_error.png
+│       │   ├── example_intro.png
+│       │   ├── example.png
+│       │   ├── exposure-negative.jpg
+│       │   ├── exposure-neutral.jpg
+│       │   ├── exposure-plus.jpg
+│       │   ├── frame.png
+│       │   ├── frame-processors.gif
+│       │   ├── googleplay.svg
+│       │   ├── hdr_comparison.png
+│       │   ├── hdr_photo_demo.webp
+│       │   ├── location.png
+│       │   ├── multi-camera.gif
+│       │   ├── sdr_comparison.png
+│       │   └── shadowlens_screenshot.png
+│       ├── .nojekyll
+│       ├── robots.txt
+│       └── site.webmanifest
+├── example
+│   ├── android
+│   │   ├── app
+│   │   │   ├── build.gradle
+│   │   │   ├── debug.keystore
+│   │   │   ├── proguard-rules.pro
+│   │   │   └── src
+│   │   │       ├── debug
+│   │   │       │   └── AndroidManifest.xml
+│   │   │       └── main
+│   │   │           ├── AndroidManifest.xml
+│   │   │           ├── ic_launcher-playstore.png
+│   │   │           ├── java
+│   │   │           │   └── com
+│   │   │           │       └── mrousavy
+│   │   │           │           └── camera
+│   │   │           │               └── example
+│   │   │           │                   ├── ExampleFrameProcessorPlugin.java
+│   │   │           │                   ├── ExampleKotlinFrameProcessorPlugin.kt
+│   │   │           │                   ├── MainActivity.kt
+│   │   │           │                   └── MainApplication.kt
+│   │   │           └── res
+│   │   │               ├── drawable
+│   │   │               │   └── rn_edit_text_material.xml
+│   │   │               ├── mipmap-anydpi-v26
+│   │   │               │   ├── ic_launcher_round.xml
+│   │   │               │   └── ic_launcher.xml
+│   │   │               ├── mipmap-hdpi
+│   │   │               │   ├── ic_launcher_foreground.png
+│   │   │               │   ├── ic_launcher.png
+│   │   │               │   └── ic_launcher_round.png
+│   │   │               ├── mipmap-mdpi
+│   │   │               │   ├── ic_launcher_foreground.png
+│   │   │               │   ├── ic_launcher.png
+│   │   │               │   └── ic_launcher_round.png
+│   │   │               ├── mipmap-xhdpi
+│   │   │               │   ├── ic_launcher_foreground.png
+│   │   │               │   ├── ic_launcher.png
+│   │   │               │   └── ic_launcher_round.png
+│   │   │               ├── mipmap-xxhdpi
+│   │   │               │   ├── ic_launcher_foreground.png
+│   │   │               │   ├── ic_launcher.png
+│   │   │               │   └── ic_launcher_round.png
+│   │   │               ├── mipmap-xxxhdpi
+│   │   │               │   ├── ic_launcher_foreground.png
+│   │   │               │   ├── ic_launcher.png
+│   │   │               │   └── ic_launcher_round.png
+│   │   │               └── values
+│   │   │                   ├── ic_launcher_background.xml
+│   │   │                   ├── strings.xml
+│   │   │                   └── styles.xml
+│   │   ├── build.gradle
+│   │   ├── gradle
+│   │   │   └── wrapper
+│   │   │       ├── gradle-wrapper.jar
+│   │   │       └── gradle-wrapper.properties
+│   │   ├── gradle.properties
+│   │   ├── gradlew
+│   │   ├── gradlew.bat
+│   │   └── settings.gradle
+│   ├── app.json
+│   ├── babel.config.js
+│   ├── clean.sh
+│   ├── .eslintrc.js
+│   ├── index.js
+│   ├── ios
+│   │   ├── File.swift
+│   │   ├── Frame Processor Plugins
+│   │   │   ├── Example Plugin
+│   │   │   │   └── ExampleFrameProcessorPlugin.m
+│   │   │   └── Example Swift Plugin
+│   │   │       ├── ExampleSwiftFrameProcessor.m
+│   │   │       └── ExampleSwiftFrameProcessor.swift
+│   │   ├── Podfile
+│   │   ├── Podfile.lock
+│   │   ├── .swift-version
+│   │   ├── VisionCameraExample
+│   │   │   ├── AppDelegate.h
+│   │   │   ├── AppDelegate.mm
+│   │   │   ├── Images.xcassets
+│   │   │   │   ├── AppIcon.appiconset
+│   │   │   │   │   ├── 1024.png
+│   │   │   │   │   ├── 114.png
+│   │   │   │   │   ├── 120.png
+│   │   │   │   │   ├── 180.png
+│   │   │   │   │   ├── 29.png
+│   │   │   │   │   ├── 40.png
+│   │   │   │   │   ├── 57.png
+│   │   │   │   │   ├── 58.png
+│   │   │   │   │   ├── 60.png
+│   │   │   │   │   ├── 80.png
+│   │   │   │   │   ├── 87.png
+│   │   │   │   │   └── Contents.json
+│   │   │   │   ├── Contents.json
+│   │   │   │   └── shutter.imageset
+│   │   │   │       ├── Contents.json
+│   │   │   │       ├── IMG_7966-1.jpg
+│   │   │   │       ├── IMG_7966-2.jpg
+│   │   │   │       └── IMG_7966.jpg
+│   │   │   ├── Info.plist
+│   │   │   ├── LaunchScreen.storyboard
+│   │   │   ├── main.m
+│   │   │   └── PrivacyInfo.xcprivacy
+│   │   ├── VisionCameraExample-Bridging-Header.h
+│   │   ├── VisionCameraExampleCocoaPodUtils.rb
+│   │   ├── VisionCameraExample.xcodeproj
+│   │   │   ├── project.pbxproj
+│   │   │   └── xcshareddata
+│   │   │       └── xcschemes
+│   │   │           └── VisionCameraExample.xcscheme
+│   │   ├── VisionCameraExample.xcworkspace
+│   │   │   ├── contents.xcworkspacedata
+│   │   │   └── xcshareddata
+│   │   │       └── IDEWorkspaceChecks.plist
+│   │   └── .xcode.env
+│   ├── metro.config.js
+│   ├── package.json
+│   ├── README.md
+│   ├── src
+│   │   ├── App.tsx
+│   │   ├── CameraPage.tsx
+│   │   ├── CodeScannerPage.tsx
+│   │   ├── Constants.ts
+│   │   ├── DevicesPage.tsx
+│   │   ├── frame-processors
+│   │   │   ├── ExampleKotlinSwiftPlugin.ts
+│   │   │   └── ExamplePlugin.ts
+│   │   ├── hooks
+│   │   │   ├── useIsForeground.ts
+│   │   │   └── usePreferredCameraDevice.ts
+│   │   ├── img
+│   │   │   └── 11.png
+│   │   ├── MediaPage.tsx
+│   │   ├── PermissionsPage.tsx
+│   │   ├── Routes.ts
+│   │   └── views
+│   │       ├── CaptureButton.tsx
+│   │       └── StatusBarBlurBackground.tsx
+│   └── tsconfig.json
+├── FOSS_CHANGES.md
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           ├── origin
+│   │           │   ├── HEAD
+│   │           │   └── main
+│   │           └── upstream
+│   │               ├── bufferorientation
+│   │               ├── chore
+│   │               │   ├── proper-mono-repo-setup
+│   │               │   └── upgrade
+│   │               ├── demo
+│   │               │   ├── all-shaders
+│   │               │   ├── face-blur
+│   │               │   └── face-emoji
+│   │               ├── demos
+│   │               ├── dependabot
+│   │               │   ├── bun
+│   │               │   │   └── docs
+│   │               │   │       ├── docusaurus-7f29446f0e
+│   │               │   │       ├── react-19.1.0
+│   │               │   │       ├── react-dom-19.1.0
+│   │               │   │       ├── typedoc-0.28.4
+│   │               │   │       └── types
+│   │               │   │           └── react-19.1.4
+│   │               │   ├── github_actions
+│   │               │   │   └── yutailang0119
+│   │               │   │       └── action-ktlint-5
+│   │               │   ├── gradle
+│   │               │   │   └── package
+│   │               │   │       └── android
+│   │               │   │           ├── androidx.lifecycle-lifecycle-common-2.9.0
+│   │               │   │           ├── camerax_version-1.5.0-beta01
+│   │               │   │           ├── com.android.tools.build-gradle-8.10.0
+│   │               │   │           └── org.jetbrains.kotlinx-kotlinx-coroutines-android-1.10.2
+│   │               │   └── npm_and_yarn
+│   │               │       └── docs
+│   │               │           ├── docusaurus-7f29446f0e
+│   │               │           ├── react-19.0.0
+│   │               │           ├── react-dom-19.0.0
+│   │               │           ├── typedoc-0.27.7
+│   │               │           └── types
+│   │               │               └── react-19.0.8
+│   │               ├── docs
+│   │               │   └── lifecycle-events
+│   │               ├── example
+│   │               │   ├── face-blur
+│   │               │   └── pytorch
+│   │               ├── face-blur-example
+│   │               ├── feat
+│   │               │   ├── 16kb-page-size
+│   │               │   ├── audio-is-silent
+│   │               │   ├── camera2-flash
+│   │               │   ├── camerax-update
+│   │               │   ├── custom-focus
+│   │               │   ├── depth-frame
+│   │               │   ├── depth-output
+│   │               │   ├── depth-output-preview-renderer
+│   │               │   ├── depth-streaming
+│   │               │   ├── disable-preview-while-starting
+│   │               │   ├── dont-play-on-silent
+│   │               │   ├── expose-frame-matrix
+│   │               │   ├── exposure-duration
+│   │               │   ├── focus
+│   │               │   ├── hand-detection
+│   │               │   ├── lazy-preview
+│   │               │   ├── lower-minsdk
+│   │               │   ├── make-startrecording-awaitable
+│   │               │   ├── mediacodec
+│   │               │   ├── memory-pressure
+│   │               │   ├── more-barcode-types
+│   │               │   ├── native-format
+│   │               │   ├── new-library-template
+│   │               │   ├── new-worklets
+│   │               │   ├── official-arch-support
+│   │               │   ├── official-arch-support-GIT-RELEASE
+│   │               │   ├── official-new-arch-support
+│   │               │   ├── performance-annotations
+│   │               │   ├── preview-orientation-event
+│   │               │   ├── rename-visioncameraproxy
+│   │               │   ├── session-wrapper
+│   │               │   ├── skia
+│   │               │   ├── skia-v4
+│   │               │   ├── stereo-audio
+│   │               │   ├── tap-to-focus-skia
+│   │               │   ├── throwable-fps
+│   │               │   ├── upgrade-camerax
+│   │               │   ├── upgrade-react-native-81
+│   │               │   └── vision-camera-v5
+│   │               ├── fix
+│   │               │   ├── allow-codescanner-and-video
+│   │               │   ├── autofocus
+│   │               │   ├── catch-initialization-exception
+│   │               │   ├── custom-capture-session
+│   │               │   ├── destroy-under-lock
+│   │               │   ├── fix-blank-first-frame
+│   │               │   ├── fix-cmake-clean
+│   │               │   ├── fix-hw-buffer-crash
+│   │               │   ├── fix-late-audio-buffers
+│   │               │   ├── fix-null-torch
+│   │               │   ├── fix-startrecording-delay
+│   │               │   ├── hardware-buffer-double-check
+│   │               │   ├── mutable-map
+│   │               │   ├── native-pixel-format
+│   │               │   ├── return-emtpy
+│   │               │   ├── sanity-checks-for-props
+│   │               │   ├── separate-frame
+│   │               │   ├── synchronized-timestamps
+│   │               │   ├── throw-if-used
+│   │               │   ├── try-fixing-blank-again
+│   │               │   ├── try-preview
+│   │               │   └── use-foreach-again
+│   │               ├── HEAD
+│   │               ├── main
+│   │               ├── perf
+│   │               │   └── stop-repeating-while-capturing
+│   │               ├── separate
+│   │               ├── try
+│   │               │   ├── livedata
+│   │               │   └── state-flow
+│   │               ├── v2
+│   │               ├── v3
+│   │               └── v3-tensorflow-plugin
+│   ├── objects
+│   │   ├── 01
+│   │   │   ├── 050363f39d5cd38635bf409d78238d28d569da
+│   │   │   ├── 7c4d535f631643cbcdd11fec89a83e900776b2
+│   │   │   ├── 8b0996f3891d66e75753c27694acfa33132be8
+│   │   │   └── 8cfc44bad8b6becea35430c2a368e4a459e096
+│   │   ├── 02
+│   │   │   ├── 069c906500efccab2a03bfedf42757475af012
+│   │   │   ├── 1d8b9997a1a7e8002ac1b5bc2257b541bd8a1b
+│   │   │   └── f72ddaf14189cd20f9e2990678e2fb1d3795b6
+│   │   ├── 03
+│   │   │   ├── e89b499bb207a36c469563c8522ff28870072a
+│   │   │   ├── f37494e4cb70913a23105247ebf17792ee4a3b
+│   │   │   └── fca037c3c7b28938bf987e51bcc63cec440125
+│   │   ├── 09
+│   │   │   └── 3f950ded6d1934dc056a9d3917d2252497cdc2
+│   │   ├── 0a
+│   │   │   ├── 00e279249210020dc6eca06accd7ba39a03b2b
+│   │   │   └── 6c20fc45fa5e36c9956a049eb8818f1c7533ad
+│   │   ├── 0c
+│   │   │   └── a143bab5402781fc58c0a4e54b8bebeba05299
+│   │   ├── 10
+│   │   │   ├── 689584dfb02a944f5cac5ba05b4efe5984504c
+│   │   │   └── fef347f9801be39b803765beb7018f3ff9e67d
+│   │   ├── 11
+│   │   │   └── 6cc1a1b2f5bc779c15933ef742196affa89861
+│   │   ├── 12
+│   │   │   ├── 3b9dd91b7875fd72e8f09f59642debba07d2e1
+│   │   │   └── 85d66564f80ee1cfa8dcc760921f4c907876a8
+│   │   ├── 13
+│   │   │   └── eee346eb64c45ecb90bb3f0d8f9ceae95329e8
+│   │   ├── 15
+│   │   │   └── 7c3ac40d0e421a78bf292ba7681788035285b5
+│   │   ├── 16
+│   │   │   ├── 9e6a4d9e420ddd86a3c900412a58f3a42fdf29
+│   │   │   └── f28a74e9ceef2861380b3c33ef6696b2a5dd48
+│   │   ├── 17
+│   │   │   ├── 76104eb7cff4c2164b7ce69530cf0b7177e1bb
+│   │   │   ├── a1026bb52e276800ff23e166683685e344575d
+│   │   │   └── b973969a2a62b0ecdc6fe04f61da465e991814
+│   │   ├── 18
+│   │   │   ├── 1150eb73db62b8217bc46115eb28659a590915
+│   │   │   ├── 6286571e78677ff0ef85b9737a1d5f4bfc4484
+│   │   │   └── c8361c15da00e0557bb602337284aa1db6f1b2
+│   │   ├── 19
+│   │   │   └── d7d811747db3843254b8696e754d29611eb345
+│   │   ├── 1a
+│   │   │   └── 97cd93de70b08cb3ac3bd74705ae88cfdcb495
+│   │   ├── 1b
+│   │   │   ├── 07f9232e4c08e76db304e6c9cdbbf3388d856f
+│   │   │   ├── 300e151c9de4c3eb8271713b66ea2e27a6b7c4
+│   │   │   ├── 7b948ad743a6a098da265ac85f648b101a0a72
+│   │   │   └── eb4f109220bdd981cce0d479a6af03410ff42e
+│   │   ├── 1d
+│   │   │   └── f8bc87071278d0cfd9b648572e428b07471e60
+│   │   ├── 20
+│   │   │   ├── 1f60f8a0863129859a750a10a9f3c7652f2601
+│   │   │   ├── 3dd8ea9fe2aca60ad29f857fd2474ba83735e3
+│   │   │   └── ffe73b9454779099a82e6da541f068a29388d3
+│   │   ├── 21
+│   │   │   ├── 1a341088a23701c1365982d7ce3e60e89bca26
+│   │   │   ├── 9b1ca1c14a1d8f19292d3957c9ccf110a103b1
+│   │   │   └── cda79b1e2168f40af4bbeabde1964ffb4019a6
+│   │   ├── 22
+│   │   │   └── b6a3640896cdfd5fd90a64182b3a5f5fcf5d1f
+│   │   ├── 24
+│   │   │   └── 8b9cd96be8f373de7a0a8507a731978f510ba8
+│   │   ├── 25
+│   │   │   ├── 05d6863950559284e9b54434cfd11feb4cd7fb
+│   │   │   └── 22cd0963bb3faca27bd12549061a691d213af6
+│   │   ├── 26
+│   │   │   └── 0e12cd1ae41fae7a322dd327cc24785eaae520
+│   │   ├── 27
+│   │   │   ├── a47e0375368b77feb76a891e728274655a152a
+│   │   │   └── c013035bc4a0fe23e831fa51ad4eec41102d03
+│   │   ├── 29
+│   │   │   ├── 57dac69da12fb1ec331678a7b946a9502595fc
+│   │   │   └── 7401681af5cd495cde60a78dcca688b21257fa
+│   │   ├── 2a
+│   │   │   └── 92ee2c728f9cfacf3a6f9a419f0868a9917f90
+│   │   ├── 2b
+│   │   │   ├── 90d2b38ea5762a5ff14d1a3ac83dc7e39c365e
+│   │   │   └── c75c59a01c2de660b87c9802fbcdf63b40e7a2
+│   │   ├── 2c
+│   │   │   └── 9bdeaa2a50226aa5eea90af964ffcaf2804724
+│   │   ├── 2e
+│   │   │   ├── 4c2f26d41b3db7863a42fcb50798b48275281a
+│   │   │   └── 96c91d4eae1201af658d84aed8f851b9f948c7
+│   │   ├── 31
+│   │   │   ├── 1273e7004976e60dc7716a09b881394134f9d3
+│   │   │   └── 34f209ea37a4065d8f1bc159b4706bad8a9380
+│   │   ├── 32
+│   │   │   ├── 24115493dfee0b04a5e88f08e297fb7bf7fd66
+│   │   │   └── e067e0c1f7bf401ec9253b2791d50526eae7c7
+│   │   ├── 33
+│   │   │   ├── 1bd8f8b3584a64f2981a24583dfba2d444adba
+│   │   │   ├── 25421a1b6eabe492af07f4b10b1839d85b92a2
+│   │   │   ├── 3cce635a2f54b3be9d27317f49c7068d5e90b2
+│   │   │   ├── 6ae7917db3243a4146c80bf02d216f8a631c62
+│   │   │   └── 78246ea8b31a7eee04b521a8acd86bc089e500
+│   │   ├── 34
+│   │   │   ├── 05bdd689de534e18ac7f37bd8f91bc8f6377bf
+│   │   │   ├── 51680eb4ca9f4d55ad91707af508edf4cc29bf
+│   │   │   ├── 591392c5c11b168dc0c7ab488b4df8d19feb94
+│   │   │   └── dd0d79f35c5178caaba85b2f93b68555102c2e
+│   │   ├── 35
+│   │   │   ├── 9f82e5461c50aaec003d1d5a9d9819aec2d718
+│   │   │   └── ecb1d6bbee98929041919bacf40c1533449d6a
+│   │   ├── 36
+│   │   │   ├── 04e4bf8289296033d951ff7f12b34891b6562e
+│   │   │   ├── 1776fd3d3c5da48e24ba7ba24f7fb55e99a083
+│   │   │   └── a9fbba1740adf9132f0bdf6461bfc340d23371
+│   │   ├── 37
+│   │   │   └── 6fb39464fe6846f3077799fa2d85b25565b6e6
+│   │   ├── 38
+│   │   │   ├── 8ad6fee896333f58cd51104efd35bdf340ec51
+│   │   │   ├── 9ea6fee6dc96900dfca1ecb1fe23893b63902f
+│   │   │   └── cf41deec368b93c62204ddb17cdcee0a4d1768
+│   │   ├── 39
+│   │   │   └── df878b026de702a92eb4276dd81e2ec77a05bc
+│   │   ├── 3a
+│   │   │   └── d8d94f851691ba96bad162f1e0d506e5be2fe0
+│   │   ├── 3c
+│   │   │   ├── 90290a2992bace0fe692523de4df9fc83e45fa
+│   │   │   └── d29b4d8823708e1defbad480ea3b48d3db3f83
+│   │   ├── 3e
+│   │   │   └── 858c3d0c8fb00e7929fe3a3f2c558f510f40f0
+│   │   ├── 3f
+│   │   │   └── fb3e41579842b67cb1a42a9e49a07ad67a060b
+│   │   ├── 40
+│   │   │   └── 5acd102011cfb168cdf98d189675a233d13ff0
+│   │   ├── 41
+│   │   │   ├── 572d267e52b0d3a5393250030dcd9b38a6981c
+│   │   │   └── d6ffd71ea9075ce7698441121a9d3d74cd0648
+│   │   ├── 43
+│   │   │   ├── 3557fb6df7331797eaba62b050c1d92622d686
+│   │   │   ├── 8af0a9250cdde08da15b643dbe0190ce0211fa
+│   │   │   └── bdb8a37c084063b8e62c01cbf0238cdd679d84
+│   │   ├── 44
+│   │   │   ├── bdf60bed414e0bcc060798a77d96061e9f5705
+│   │   │   └── cb51f0a5196698b84ccb13440e820f95b9f2ec
+│   │   ├── 46
+│   │   │   └── 39cf3d0ef3184470f884f416c03010084a1951
+│   │   ├── 47
+│   │   │   ├── 392128254f261840934aec0af7a810720871e3
+│   │   │   └── c42b4407f5f5690c50f075d2bb1493d6864528
+│   │   ├── 48
+│   │   │   └── 0b6d4ac400f3e6b1c7a44b36ed0776f3f2754e
+│   │   ├── 49
+│   │   │   ├── 8fa6cade57c962d2728f250d2ae293cedfeffb
+│   │   │   ├── bd8a0a79e3eb32ebf57b20cb0a3faa65e20556
+│   │   │   └── f09b8e80fdb53282459b1060d7eeddea51d3b6
+│   │   ├── 4a
+│   │   │   └── 702ebeeb64eec0699f820eaeb3570a4ebef936
+│   │   ├── 4b
+│   │   │   ├── 11f43c7d9f09d223d916995821f6b9d35b9f75
+│   │   │   └── 3c5ae6a54a12f8188b6d973876056e39bacfd3
+│   │   ├── 4e
+│   │   │   └── 18aeaa6d6b2940d5bbb5dedffca0397a96cd54
+│   │   ├── 50
+│   │   │   └── 7870b97e35e05265af6749566d379cd2cba9b0
+│   │   ├── 51
+│   │   │   ├── 479b475913364720c14442894990b641c3232e
+│   │   │   └── c6cead9a51d4e090ec659b1b02efdd925bb970
+│   │   ├── 53
+│   │   │   └── 67ba0ce39b5fff84d85862bfc9153084a2c4f2
+│   │   ├── 54
+│   │   │   ├── 209cb10931b364114cc30049919ef18647526e
+│   │   │   └── bfe1f10b5c17a6b50e8a4d939de0e4e5cc6650
+│   │   ├── 55
+│   │   │   └── a7add896d5b18fbfc136ee711654e548d83646
+│   │   ├── 56
+│   │   │   ├── 0cf9e3a05eeaad278787c9852afa968a323dfa
+│   │   │   ├── 92a19373f6240a5c2bc8dcf44c7a08604911ef
+│   │   │   ├── e07ce9a5cf28802d5e085b9e9907caec572803
+│   │   │   └── e64fd9dd83820119873931220199e2e586e6e9
+│   │   ├── 58
+│   │   │   ├── 42b9708907eb0e997bfef57d19dae426cefcb2
+│   │   │   └── ae6b55b143709ede7234ea56b42aae48406371
+│   │   ├── 59
+│   │   │   ├── 9a0f6b85e1ec67933828d060553e53f050f6f1
+│   │   │   └── d40d95bab9cd660d17877221e3110e9e8499e4
+│   │   ├── 5a
+│   │   │   ├── 23a3a3142e2e898320503980cf32bb22fef97f
+│   │   │   ├── 4eaf71400c2762a3b449d85c0cd987cea18d9b
+│   │   │   └── 98a79fcaa8133b5626a84a70b11abbc9a9829c
+│   │   ├── 5c
+│   │   │   ├── 184902da09656339220b5be9ef76a770cbf84e
+│   │   │   ├── 919f1e348fbb280f79c273c7e65c19514f5380
+│   │   │   └── b3e530578f8d64b76c30826b9ca9d9b4ffc4f7
+│   │   ├── 5d
+│   │   │   ├── 8fc1d679f77610fa669e6a202c570be26de1c1
+│   │   │   └── db16facd8135d0e99b368bcb1cbe8a837de2a2
+│   │   ├── 5e
+│   │   │   ├── 23540bcf0b4dd04f4bfeaa15b0682bf18a4cd9
+│   │   │   ├── 284abff966e4ad48b63979e661c73d2d8e5c7f
+│   │   │   └── 9fbaa3624fd8d0545b68988e5b286428814134
+│   │   ├── 60
+│   │   │   ├── 26819aaebf4c54258eb34c9b4254e9d5de6d9f
+│   │   │   └── a63f399228e0e091fe73008b20afe1740bcb88
+│   │   ├── 61
+│   │   │   └── 8f3387ece93e5c8ad8f1ce7f643cf5ad3df5f6
+│   │   ├── 62
+│   │   │   ├── 97ede5df7d44e89f8c75e225d5c84554813abd
+│   │   │   └── d69c12f09615a0e9e0a326060f6b41f51ca889
+│   │   ├── 64
+│   │   │   └── 2c69e3f095c7740f32c557d3d3a88c70fb8e89
+│   │   ├── 65
+│   │   │   ├── 0ca4df9bdcd9007954ef1c3af1e3a80d8e4dad
+│   │   │   ├── 1d6d9718c790b0921f546c1f56473a0dad7c52
+│   │   │   ├── 2480cf86778a7dbf3f0bf8a94a672f1172621a
+│   │   │   ├── 73ca87ecf5ac0d7809c0e896b3a699e45a0ed6
+│   │   │   └── df6d6577e31113c705297a6949351b69a37ecd
+│   │   ├── 66
+│   │   │   ├── 0538b8ca68e17dee731458219f1bb2e54c4ba3
+│   │   │   ├── 639a69d8e27b01f559460fa4ba7cfd0cb80354
+│   │   │   ├── 8fded9b504bf3be60fe40ae684392051d1f826
+│   │   │   └── c4b8b96b17c899b2a81196310a687ef0893498
+│   │   ├── 68
+│   │   │   └── 7024f7f0a6a2122abec3ffd9df644efa42cde3
+│   │   ├── 69
+│   │   │   ├── 1af8062c5176fb6098e0138c62c199d4821664
+│   │   │   ├── 41946c9424fe60220ee68de696ab7c21fabae0
+│   │   │   └── e74177c60544820a4c97274490a866445e5223
+│   │   ├── 6a
+│   │   │   └── 492562ca8466284c06ae200f67b846d37b67c0
+│   │   ├── 6b
+│   │   │   ├── 457087e2b60309fadec5c4a7261d9347cb2786
+│   │   │   ├── 7306b6458c5419283feceacda934e38df9b0d5
+│   │   │   └── c688750f8c20e2724b97a1a99781d8ba684e3e
+│   │   ├── 6d
+│   │   │   ├── 0d8556dd66fb959960d4b45fe4f513e4733cb2
+│   │   │   └── 10a29a96bdcd0526b468a8e80e085c25240364
+│   │   ├── 6e
+│   │   │   └── 439eb55887491197bb7bb67c4d759de6123731
+│   │   ├── 6f
+│   │   │   └── e5d0682b87d185c3e6b380e261f306369dd00b
+│   │   ├── 70
+│   │   │   └── bea4c56a790c54912e90a3751dd9a3a71bdb07
+│   │   ├── 71
+│   │   │   └── 059342f864ae0c7c3e709c8c4c9fadcd5ad36e
+│   │   ├── 72
+│   │   │   └── b38db605b16761dee88cdd2343e79098f88b9e
+│   │   ├── 74
+│   │   │   └── 50972d17e15847a8214b94a1594b8f6519c720
+│   │   ├── 78
+│   │   │   ├── 41f7d1465a18755a81cc5364c20bf6ca649e53
+│   │   │   ├── 6f094bb681b346b74247b9235e4e4a84843c5c
+│   │   │   └── eb73f489460f623cf746a9e81dc0370b9336fc
+│   │   ├── 79
+│   │   │   ├── ae3bace5bb1edd120620fe723d698d3a7e91b1
+│   │   │   └── ee7ea69d6d659fbf86f4856b0fde851fb76434
+│   │   ├── 7a
+│   │   │   └── 3adc787db8e024dc1e827f80414fa6e0ac49bd
+│   │   ├── 7d
+│   │   │   └── b3a490b3c6cbca6883d79592c8c3948e3a6b82
+│   │   ├── 7e
+│   │   │   ├── 4694b65bb3227218c5b4bae3c4d5810fa00ed6
+│   │   │   ├── 6db7b8537946b1928110c4682b12b78555d5ce
+│   │   │   └── 9df3dade232348e9af8f8acf4e4d32269978ee
+│   │   ├── 81
+│   │   │   ├── 25f46efc3e876e222b95305016f48656a85f75
+│   │   │   └── efc62919e9a63dea3db7b1197838372861cbd7
+│   │   ├── 85
+│   │   │   ├── 1ef2ecfecfe0404e2903cc647342e5951acdda
+│   │   │   └── 66b374120e6a80dd5b412ef14a775f3decc1e7
+│   │   ├── 86
+│   │   │   ├── 892f89416b87c8653249e2fb32de584ac3f866
+│   │   │   └── e61b7985334f42d64724e31d3a78d2a49f1ff2
+│   │   ├── 87
+│   │   │   ├── 2503633ee3713fe44644b283ab9f9dfb78bb06
+│   │   │   ├── 618e6f2fc177241331bcd9bbf96c359fc87996
+│   │   │   └── a47ff76cc9b71f9a169f4bbaec5d405f9fd1ce
+│   │   ├── 88
+│   │   │   └── e49ca1d71a1c7f55c92d6ce7f1e87567bdd420
+│   │   ├── 89
+│   │   │   ├── 5b1cac5157b2946586c2cca1ab7f7836ecbcbd
+│   │   │   └── 8b663e99fa0742a4dcb2b334ffcf7d375da5b9
+│   │   ├── 8b
+│   │   │   └── 5da937979126c8928d80027fc45deb83cdfc33
+│   │   ├── 8c
+│   │   │   └── 067617b1149fc6eeefd9f4641f4035a5a227e2
+│   │   ├── 8d
+│   │   │   ├── 1b720b21587f39bea64cb676f600b66fd8f337
+│   │   │   ├── 776c4dbac4b6bf8b736adb8cd8aaa357311b6f
+│   │   │   ├── c3c9bca97ffdd881cbca2769afd143f1c77587
+│   │   │   └── fa1a9ec5747dcd36b5484e61bba80ad0e8919e
+│   │   ├── 8f
+│   │   │   └── 8e22f59657dfd9f45a418f2d198e680bf599b0
+│   │   ├── 90
+│   │   │   └── f41ab3a1d53df01e6a04a6cbab1baa95e14258
+│   │   ├── 91
+│   │   │   ├── 5e25d0ad59be95f41508bc70a3862887cc10cf
+│   │   │   └── e2fd4998d80ddfdde1a5cf2cf1804dac60c9b8
+│   │   ├── 92
+│   │   │   ├── 9806aa8d5259a642ac0de19c72124dd58d6507
+│   │   │   ├── d314c2ac47c3be1ef7ee149b1f08079aac1b80
+│   │   │   └── e577de6396d0dde77260d84e7687a52316e489
+│   │   ├── 93
+│   │   │   └── d2c6ee6d80a4f93b394f9123a1ffe0ac83a619
+│   │   ├── 94
+│   │   │   ├── b2c80bdba1f47714ed31b5b589de2cb3941637
+│   │   │   └── b331c74987858070c423313b87487779eac0d3
+│   │   ├── 96
+│   │   │   └── ec52f7355a10247157d9eb575aa0f82ade8889
+│   │   ├── 97
+│   │   │   └── 168202ed4dbb2584f4a030de3af4bd83a48216
+│   │   ├── 99
+│   │   │   └── f7ff8d8e665c926758829f8e4bb496084f9ab6
+│   │   ├── 9c
+│   │   │   └── edbe983df4bd5e5e6407aefdfb5f9eb4b4292d
+│   │   ├── 9d
+│   │   │   ├── 51edb8d980094a7e43e831e876d7de0ad3f777
+│   │   │   ├── 7d864a744789619a2f288aaa8335076f41bb4d
+│   │   │   └── 7e336b0ea65fbd65c90986c7ff3da4e07f9a4d
+│   │   ├── 9e
+│   │   │   ├── 441c1e0bd74d17a831d7a6935089561058507b
+│   │   │   ├── 5d9c43542b8e0e6a94fd8b0c82c994e0a5e6a3
+│   │   │   ├── 61689dd678250503d79e3314a5a14ef591cc0d
+│   │   │   ├── b6e1143ab12f53193298e55947faddba490d9b
+│   │   │   ├── b71ecf2c407459c5f9951a254346a3c6546ce8
+│   │   │   └── fd839df1c68ba87d062e8eb11fd56f556c458c
+│   │   ├── 9f
+│   │   │   ├── 403dbb41847a8a844661b06b7a7be3f4eb58ae
+│   │   │   └── 94ec192eb69b1ef57e89664859510ebd4b06f5
+│   │   ├── a0
+│   │   │   └── da322de31ebee34c358e870fb5aaebe18cafc3
+│   │   ├── a1
+│   │   │   ├── 24c29c6c942c573bf8155d24d4f1c6d159c9b2
+│   │   │   ├── 707b8c12d2fb9642d59a5ba4a8edfb18a20165
+│   │   │   ├── 73ab8714f051779aa4bc39c6ec73ab3b79d392
+│   │   │   ├── ec9937800a9be13f6ccd6e517f6244a3029ed7
+│   │   │   └── f30b8087b7ca7336bd03e22e95a919791cf730
+│   │   ├── a2
+│   │   │   └── 4daadd69ad86af4e44d6e9ffcfaf275c1cf147
+│   │   ├── a3
+│   │   │   ├── b1574942b488159194b7a79e8d8c5f3137050d
+│   │   │   └── b5a4a202cfa150de0f702ccabfe6117ed46cc3
+│   │   ├── a4
+│   │   │   ├── 4a9369e60a9200ca0e4f799d22208478d8410d
+│   │   │   ├── bafc83e4af2321c937cdce3e1de2134b2558b5
+│   │   │   └── c5495787f0f0c1ecdc5891cd6208adfddedf0b
+│   │   ├── a6
+│   │   │   └── c3571fcc9a5a515000359607952b4c410b3ab0
+│   │   ├── a7
+│   │   │   ├── 51ab7c4fd12a301f6c53f8fa152edd38dcc1f1
+│   │   │   ├── 90197f0df912de2b638a3676b6e441a7136cca
+│   │   │   ├── a23316ef94666f3b178428064877cb3e185d17
+│   │   │   └── f27e984dfe5dc7af3003c1d6a6dacb093520ba
+│   │   ├── a8
+│   │   │   ├── 66fc0c896f81462a47b4998df559bbdadd7727
+│   │   │   └── cab11a01bf31281bf4bf105f3dc23bdf391bb3
+│   │   ├── a9
+│   │   │   ├── 2c41e8f0caf9ac6faaf8076ffd6a60af91cd39
+│   │   │   └── 9c9b5683af8c0d66a5e7f60dba47f39602d1bd
+│   │   ├── aa
+│   │   │   └── 14e4e0f937d248f87105980f5fbc018d92d373
+│   │   ├── ab
+│   │   │   ├── 9b8a2abe72de6be33e14b57e39be5d64cdfa42
+│   │   │   └── ee4920182dec4255f9637f9a6fbf822da37cf0
+│   │   ├── ac
+│   │   │   ├── 2168765d91c6749a742952f0ae15fe86b3d83b
+│   │   │   ├── 43715393c7beec57bb73da3b38afc9aadc881f
+│   │   │   └── c2c91d51b3404507574efca0c7b08ad838d665
+│   │   ├── ad
+│   │   │   ├── 3e45cd95e86ca5c4acd41c5c3b93767713838c
+│   │   │   ├── e1b620de791e8b2dd40bd17d511f506cd27572
+│   │   │   └── e22a41960ee06a1ca56695cec1d0405a72093b
+│   │   ├── ae
+│   │   │   └── 0c8f8a7864606fdf36c33d2db39cf80639e1d8
+│   │   ├── af
+│   │   │   └── 176a74d38f7be5b93b60c705edf65b5bab06e5
+│   │   ├── b0
+│   │   │   └── ad1f22beab8c9d193cadd6595ee41e14f1711c
+│   │   ├── b1
+│   │   │   └── db1d8769a6842de6157ae33cc3211cc9bcf946
+│   │   ├── b6
+│   │   │   └── d348d1252bd633d4b5dcfa7436cfb5452e666d
+│   │   ├── b8
+│   │   │   ├── 1dc96119ddf168e4f8d77b9f74e08bcd1b1857
+│   │   │   └── c471aae989af46b11442319d3366334ee1831b
+│   │   ├── b9
+│   │   │   └── 4db1abff58d7dbc4a2f4669a6940269242987f
+│   │   ├── bb
+│   │   │   ├── 5ca757315745d53043c307cd9ed67403bd431c
+│   │   │   └── d206917d4cbe8dc24291c3bf4677b34e7bdccc
+│   │   ├── bf
+│   │   │   ├── 527857fb9057c94e44cb655689d0c8254fd2cc
+│   │   │   ├── bd572faa99f8ce4fb1cd73e9af3592054de7e0
+│   │   │   └── c9cec7e2089a3768cd157622b0e418574535ec
+│   │   ├── c0
+│   │   │   ├── 2c3f07dc5375cfec0eaac367f3758d1678a04a
+│   │   │   └── c25066ce0840e4c3f4dfcfc8d5f2db08c571ae
+│   │   ├── c2
+│   │   │   ├── 240a09de71aaaefe514c982319404bd8fa6ed9
+│   │   │   ├── 318d11402ae21f8e372b8a1d0edff9e9bced40
+│   │   │   └── fa4c9f3180001076632a9697398f46afe2f719
+│   │   ├── c4
+│   │   │   └── ab5b0d673675a1e97041deb4c1bde4490baafd
+│   │   ├── c5
+│   │   │   └── 1a32d65b1dfdf65997548f3c31d22a61764b5d
+│   │   ├── c7
+│   │   │   ├── 418260437d6bf50cd73b1747d19f311e59c3d2
+│   │   │   ├── 4285c9d9245a37b5af5f135cfda989af4b11d4
+│   │   │   └── 8dce527d2953c6d5df620f04b4797b6e5061bf
+│   │   ├── c8
+│   │   │   └── 6b26a3a9698b4df6b73e11cea2c7a51ce5a732
+│   │   ├── c9
+│   │   │   └── 3b22e98d1fcfd717e608f1936800ed543880a4
+│   │   ├── ca
+│   │   │   ├── c87c91629c5d9022b20762e09eed7198d13837
+│   │   │   └── e95851f535f7cf3594ae4a39c84ace162279d6
+│   │   ├── cb
+│   │   │   └── e5b6ecf6b5185e444f2feb38c7bcbc82c78197
+│   │   ├── cd
+│   │   │   └── aef44130c06acc50344c9c064428c8eb37e00b
+│   │   ├── ce
+│   │   │   └── dbe9739090e7c39ade82b2de5f156abb8c788a
+│   │   ├── cf
+│   │   │   ├── 16b31253e9e3e29f0fd39b4ec54114cb494300
+│   │   │   ├── 8380c82e2f1d1818ea34ff0d9395f672ccef43
+│   │   │   └── d96bb203cfc8b5c4e4210784de6eba6192e4f9
+│   │   ├── d0
+│   │   │   ├── 37898c9bd62569108f2dfc5525607ff9e6f868
+│   │   │   └── 772d823e58debd887ee01f5a44ee80a49b2742
+│   │   ├── d2
+│   │   │   └── 6b992660b4b6849522dd1f21e195d6b1e8632b
+│   │   ├── d4
+│   │   │   ├── 79ceddb2b1a6342326df559966b193e833cb2e
+│   │   │   └── 9354f7df93da1feabc00fcf9d1ab40e73fdd53
+│   │   ├── d5
+│   │   │   └── 24d549669c57650333d3547df5aaa476b43a14
+│   │   ├── d6
+│   │   │   └── 5aaefc5010591d32d5616f67e6b4477b0673ae
+│   │   ├── d7
+│   │   │   ├── 6229e13d7ae9af331ea0c36fa9dc3754f8ed75
+│   │   │   └── 964528ec4006a0738e001490210484806fd8de
+│   │   ├── d9
+│   │   │   ├── 1332bfa74329b3bf5af7c02ea885faa69058b5
+│   │   │   └── 80e31f5c7fb6fe76392f79fc07961d9f8a4654
+│   │   ├── da
+│   │   │   └── ef05d8a19ffefd4a54d8f4a6f4c975840fc8aa
+│   │   ├── db
+│   │   │   └── fe13898bbeb0827a963daeb35e383a033f243b
+│   │   ├── dc
+│   │   │   ├── 1f3c893acc0de7bd7c0007299f0c0fa07e488f
+│   │   │   ├── 810fe002a23db5403ecee848bea850f95d08bd
+│   │   │   └── 858e0e836c85a59c35ba5586a5f128191c08b4
+│   │   ├── dd
+│   │   │   ├── 33243c472397ee748c04452cd64131dba9dac3
+│   │   │   └── 88154da70c4f32267be82c0d23cd4ac2694a6b
+│   │   ├── de
+│   │   │   └── d3fac14592e3b17dac3f9505c48045cc054b4d
+│   │   ├── df
+│   │   │   └── 8a4efcb8749b00bb7f8d754a89aae70f17ba73
+│   │   ├── e0
+│   │   │   ├── 26e5d07e97245180665763e3e8a5ee8fa9871d
+│   │   │   ├── 475d04ef5abbe00b000769dbc32f6d946ec34f
+│   │   │   ├── e6593e0baa58b3accea225c69c7253d18841b7
+│   │   │   └── fb060cb056b87f52f39a23598a10d2d1f4ff65
+│   │   ├── e1
+│   │   │   ├── 33861411fe1ca2a0433a7d04dc24224066fe28
+│   │   │   ├── 77b8af53344f655a06c5c7680d34cc42664449
+│   │   │   └── 9770756826ecb556cc4fbccafce3825dc366ef
+│   │   ├── e2
+│   │   │   └── d56556f6e7b3a3be16908ff20d704f700fa9aa
+│   │   ├── e4
+│   │   │   ├── 90ac0e463e4b6a50ddf17dc24df40ef589e16d
+│   │   │   └── b466dcc275eb58437166b1e2b8bf9758bf5d01
+│   │   ├── e5
+│   │   │   └── d7909f4d6d18f67ca7aa0806549d0893801b3e
+│   │   ├── e6
+│   │   │   ├── 4e15e9500909ed25317354a109ef377678e25c
+│   │   │   ├── 974d51f62eab766acb51f4b31fc4526a5f3138
+│   │   │   └── b635ad4705aaa8aa956b0b19cfade62b792e61
+│   │   ├── e8
+│   │   │   └── 1bbdd46d91c3b2615f4d322b7f7f284dd0c7d8
+│   │   ├── e9
+│   │   │   └── a0b0e3c618fa853fca744ce11375068dbb3d5a
+│   │   ├── eb
+│   │   │   ├── 19f0c2d653f28f9f72f38f3e614319bb727bef
+│   │   │   └── e89b4305217f58b5939f2b06626ba8d2ee56c8
+│   │   ├── ec
+│   │   │   ├── 6eedb0b0399e3e79cc07c5b137a4b1fb46f017
+│   │   │   ├── 7e001eaf0e38e8fcb8d8ec797c2c26d3f57e3e
+│   │   │   └── b92df12d6a91d0b6e8689efaf01849432f3054
+│   │   ├── ed
+│   │   │   └── a84c46810e78b069788eebb09d216acc2481fc
+│   │   ├── ef
+│   │   │   ├── 0580b774cc6c5f43ff074a6ff684eabe428728
+│   │   │   └── 2576856acbc3a58c07252d21946382ab4b7b5e
+│   │   ├── f0
+│   │   │   ├── 6c3fef5019d5b6ae0957ef4174d611a412c0a0
+│   │   │   ├── 8d4b19f592960373e11bb44bb9e538e2da535e
+│   │   │   ├── 92b6270930b352a758213abd14bc81d737f25e
+│   │   │   ├── 9cb5e87e077818f2739b3ecdd774096a14b4ab
+│   │   │   └── d25ae0eaf170be6865a6f5ef9b1c4f43f3fc8c
+│   │   ├── f1
+│   │   │   └── f21bfd060983b76acc0724696acd64a10d7d3f
+│   │   ├── f3
+│   │   │   └── e802d5187f545c4b9e81809728ff209d14753e
+│   │   ├── f4
+│   │   │   ├── 3899e98bb0ff4cc8546dbd0ad822af71a6df1f
+│   │   │   ├── 3b7c1a9bdcec5332fc701f52f891d5baaabaa6
+│   │   │   └── 853c37c5f63d224ca87920552caac52b1540a7
+│   │   ├── f5
+│   │   │   ├── 0ddb082a56fe5b3a81ecc848fadfe14ef890c2
+│   │   │   └── 6e78668829640220db702751fa9bf33b7af213
+│   │   ├── f6
+│   │   │   └── b8cb81f7913c96fb8c9e01b90b6052bce21a9d
+│   │   ├── f7
+│   │   │   ├── 50ed9164d8f6e2df4020dde020db5476053376
+│   │   │   └── ab61bd984f9342a9c464a8ef76cdd39dece832
+│   │   ├── f8
+│   │   │   └── 253365c96a03fcc7dfa408aee06c58bddb33e1
+│   │   ├── f9
+│   │   │   ├── 2e5dc978b71f23516187a76bfb340c4c8b0aac
+│   │   │   ├── 804fa05dd12657e4812b82d1e0d2ee1569f86a
+│   │   │   └── 8d8f6ac01cdd0e4bc17524eca79399ea60230e
+│   │   ├── fb
+│   │   │   └── bf9fcd595d45fee3f9ab549a17ed302fceacf5
+│   │   ├── fc
+│   │   │   └── 2001aa048125752446eb6c55cd3c0ab74641d1
+│   │   ├── fd
+│   │   │   └── 21fb955f8002eeeb6561ccd622b9caf6696681
+│   │   ├── fe
+│   │   │   └── 3b110b09da1e087d38475366c40407de38c2b5
+│   │   ├── info
+│   │   └── pack
+│   │       ├── pack-4bae29e091edcb38d1b22162c4cc5c615da3f1a0.idx
+│   │       ├── pack-4bae29e091edcb38d1b22162c4cc5c615da3f1a0.pack
+│   │       ├── pack-4bae29e091edcb38d1b22162c4cc5c615da3f1a0.rev
+│   │       ├── pack-bd03131ab895d8a689651803b7f61e1b8b450943.idx
+│   │       ├── pack-bd03131ab895d8a689651803b7f61e1b8b450943.pack
+│   │       └── pack-bd03131ab895d8a689651803b7f61e1b8b450943.rev
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   ├── origin
+│       │   │   ├── HEAD
+│       │   │   └── main
+│       │   └── upstream
+│       │       ├── bufferorientation
+│       │       ├── chore
+│       │       │   ├── proper-mono-repo-setup
+│       │       │   └── upgrade
+│       │       ├── demo
+│       │       │   ├── all-shaders
+│       │       │   ├── face-blur
+│       │       │   └── face-emoji
+│       │       ├── demos
+│       │       ├── dependabot
+│       │       │   ├── bun
+│       │       │   │   └── docs
+│       │       │   │       ├── docusaurus-7f29446f0e
+│       │       │   │       ├── react-19.1.0
+│       │       │   │       ├── react-dom-19.1.0
+│       │       │   │       ├── typedoc-0.28.4
+│       │       │   │       └── types
+│       │       │   │           └── react-19.1.4
+│       │       │   ├── github_actions
+│       │       │   │   └── yutailang0119
+│       │       │   │       └── action-ktlint-5
+│       │       │   ├── gradle
+│       │       │   │   └── package
+│       │       │   │       └── android
+│       │       │   │           ├── androidx.lifecycle-lifecycle-common-2.9.0
+│       │       │   │           ├── camerax_version-1.5.0-beta01
+│       │       │   │           ├── com.android.tools.build-gradle-8.10.0
+│       │       │   │           └── org.jetbrains.kotlinx-kotlinx-coroutines-android-1.10.2
+│       │       │   └── npm_and_yarn
+│       │       │       └── docs
+│       │       │           ├── docusaurus-7f29446f0e
+│       │       │           ├── react-19.0.0
+│       │       │           ├── react-dom-19.0.0
+│       │       │           ├── typedoc-0.27.7
+│       │       │           └── types
+│       │       │               └── react-19.0.8
+│       │       ├── docs
+│       │       │   └── lifecycle-events
+│       │       ├── example
+│       │       │   ├── face-blur
+│       │       │   └── pytorch
+│       │       ├── face-blur-example
+│       │       ├── feat
+│       │       │   ├── 16kb-page-size
+│       │       │   ├── audio-is-silent
+│       │       │   ├── camera2-flash
+│       │       │   ├── camerax-update
+│       │       │   ├── custom-focus
+│       │       │   ├── depth-frame
+│       │       │   ├── depth-output
+│       │       │   ├── depth-output-preview-renderer
+│       │       │   ├── depth-streaming
+│       │       │   ├── disable-preview-while-starting
+│       │       │   ├── dont-play-on-silent
+│       │       │   ├── expose-frame-matrix
+│       │       │   ├── exposure-duration
+│       │       │   ├── focus
+│       │       │   ├── hand-detection
+│       │       │   ├── lazy-preview
+│       │       │   ├── lower-minsdk
+│       │       │   ├── make-startrecording-awaitable
+│       │       │   ├── mediacodec
+│       │       │   ├── memory-pressure
+│       │       │   ├── more-barcode-types
+│       │       │   ├── native-format
+│       │       │   ├── new-library-template
+│       │       │   ├── new-worklets
+│       │       │   ├── official-arch-support
+│       │       │   ├── official-arch-support-GIT-RELEASE
+│       │       │   ├── official-new-arch-support
+│       │       │   ├── performance-annotations
+│       │       │   ├── preview-orientation-event
+│       │       │   ├── rename-visioncameraproxy
+│       │       │   ├── session-wrapper
+│       │       │   ├── skia
+│       │       │   ├── skia-v4
+│       │       │   ├── stereo-audio
+│       │       │   ├── tap-to-focus-skia
+│       │       │   ├── throwable-fps
+│       │       │   ├── upgrade-camerax
+│       │       │   ├── upgrade-react-native-81
+│       │       │   └── vision-camera-v5
+│       │       ├── fix
+│       │       │   ├── allow-codescanner-and-video
+│       │       │   ├── autofocus
+│       │       │   ├── catch-initialization-exception
+│       │       │   ├── custom-capture-session
+│       │       │   ├── destroy-under-lock
+│       │       │   ├── fix-blank-first-frame
+│       │       │   ├── fix-cmake-clean
+│       │       │   ├── fix-hw-buffer-crash
+│       │       │   ├── fix-late-audio-buffers
+│       │       │   ├── fix-null-torch
+│       │       │   ├── fix-startrecording-delay
+│       │       │   ├── hardware-buffer-double-check
+│       │       │   ├── mutable-map
+│       │       │   ├── native-pixel-format
+│       │       │   ├── return-emtpy
+│       │       │   ├── sanity-checks-for-props
+│       │       │   ├── separate-frame
+│       │       │   ├── synchronized-timestamps
+│       │       │   ├── throw-if-used
+│       │       │   ├── try-fixing-blank-again
+│       │       │   ├── try-preview
+│       │       │   └── use-foreach-again
+│       │       ├── HEAD
+│       │       ├── main
+│       │       ├── perf
+│       │       │   └── stop-repeating-while-capturing
+│       │       ├── separate
+│       │       ├── try
+│       │       │   ├── livedata
+│       │       │   └── state-flow
+│       │       ├── v2
+│       │       ├── v3
+│       │       └── v3-tensorflow-plugin
+│       └── tags
+│           ├── v1.0.0
+│           ├── v1.0.0-alpha.1
+│           ├── v1.0.0-alpha.2
+│           ├── v1.0.0-alpha.3
+│           ├── v1.0.0-alpha.4
+│           ├── v1.0.0-alpha.5
+│           ├── v1.0.0-alpha.6
+│           ├── v1.0.1
+│           ├── v1.0.10
+│           ├── v1.0.11
+│           ├── v1.0.2
+│           ├── v1.0.3
+│           ├── v1.0.4
+│           ├── v1.0.5
+│           ├── v1.0.6
+│           ├── v1.0.7
+│           ├── v1.0.8
+│           ├── v1.0.9
+│           ├── v2.0.0
+│           ├── v2.0.1
+│           ├── v2.0.2
+│           ├── v2.1.0
+│           ├── v2.10.0
+│           ├── v2.11.0
+│           ├── v2.11.1
+│           ├── v2.11.2
+│           ├── v2.12.0
+│           ├── v2.12.1
+│           ├── v2.12.2
+│           ├── v2.13.0
+│           ├── v2.13.1
+│           ├── v2.13.2
+│           ├── v2.13.3
+│           ├── v2.13.5
+│           ├── v2.14.0
+│           ├── v2.14.1
+│           ├── v2.15.0
+│           ├── v2.15.1
+│           ├── v2.15.2
+│           ├── v2.15.3
+│           ├── v2.15.4
+│           ├── v2.15.5
+│           ├── v2.15.6
+│           ├── v2.16.0
+│           ├── v2.16.1
+│           ├── v2.16.2
+│           ├── v2.16.3
+│           ├── v2.16.4
+│           ├── v2.16.5
+│           ├── v2.16.6
+│           ├── v2.16.7
+│           ├── v2.16.8
+│           ├── v2.2.0
+│           ├── v2.3.0
+│           ├── v2.4.0
+│           ├── v2.4.1
+│           ├── v2.4.2-beta.0
+│           ├── v2.4.2-beta.1
+│           ├── v2.4.2-beta.10
+│           ├── v2.4.2-beta.11
+│           ├── v2.4.2-beta.12
+│           ├── v2.4.2-beta.13
+│           ├── v2.4.2-beta.2
+│           ├── v2.4.2-beta.3
+│           ├── v2.4.2-beta.4
+│           ├── v2.4.2-beta.5
+│           ├── v2.4.2-beta.6
+│           ├── v2.4.2-beta.7
+│           ├── v2.4.2-beta.8
+│           ├── v2.4.2-beta.9
+│           ├── v2.5.0
+│           ├── v2.6.0
+│           ├── v2.6.1
+│           ├── v2.7.0
+│           ├── v2.8.0
+│           ├── v2.8.1
+│           ├── v2.8.2
+│           ├── v2.8.3
+│           ├── v2.9.0
+│           ├── v2.9.1
+│           ├── v2.9.2
+│           ├── v2.9.3
+│           ├── v2.9.4
+│           ├── v3.0.0
+│           ├── v3.0.0-rc.1
+│           ├── v3.0.0-rc.10
+│           ├── v3.0.0-rc.2
+│           ├── v3.0.0-rc.3
+│           ├── v3.0.0-rc.4
+│           ├── v3.0.0-rc.6
+│           ├── v3.0.0-rc.8
+│           ├── v3.0.0-rc.9
+│           ├── v3.1.0
+│           ├── v3.2.0
+│           ├── v3.2.1
+│           ├── v3.2.2
+│           ├── v3.3.0
+│           ├── v3.3.1
+│           ├── v3.4.0
+│           ├── v3.4.1
+│           ├── v3.5.0
+│           ├── v3.5.1
+│           ├── v3.6.0
+│           ├── v3.6.1
+│           ├── v3.6.10
+│           ├── v3.6.11
+│           ├── v3.6.12
+│           ├── v3.6.13
+│           ├── v3.6.14
+│           ├── v3.6.15
+│           ├── v3.6.16
+│           ├── v3.6.17
+│           ├── v3.6.2
+│           ├── v3.6.3
+│           ├── v3.6.4
+│           ├── v3.6.5
+│           ├── v3.6.6
+│           ├── v3.6.7
+│           ├── v3.6.8
+│           ├── v3.6.9
+│           ├── v3.7.0
+│           ├── v3.7.1
+│           ├── v3.8.0
+│           ├── v3.8.1
+│           ├── v3.8.2
+│           ├── v3.9.0
+│           ├── v3.9.0-beta.0
+│           ├── v3.9.0-beta.1
+│           ├── v3.9.0-beta.2
+│           ├── v3.9.0-beta.3
+│           ├── v3.9.0-beta.4
+│           ├── v3.9.0-beta.5
+│           ├── v3.9.0-beta.6
+│           ├── v3.9.1
+│           ├── v3.9.2
+│           ├── v4.0.0
+│           ├── v4.0.0-beta.10
+│           ├── v4.0.0-beta.11
+│           ├── v4.0.0-beta.12
+│           ├── v4.0.0-beta.13
+│           ├── v4.0.0-beta.14
+│           ├── v4.0.0-beta.15
+│           ├── v4.0.0-beta.16
+│           ├── v4.0.0-beta.17
+│           ├── v4.0.0-beta.18
+│           ├── v4.0.0-beta.4
+│           ├── v4.0.0-beta.5
+│           ├── v4.0.0-beta.6
+│           ├── v4.0.0-beta.7
+│           ├── v4.0.0-beta.8
+│           ├── v4.0.0-beta.9
+│           ├── v4.0.1
+│           ├── v4.0.2
+│           ├── v4.0.3
+│           ├── v4.0.4
+│           ├── v4.0.5
+│           ├── v4.1.0
+│           ├── v4.2.0
+│           ├── v4.2.1
+│           ├── v4.3.0
+│           ├── v4.3.1
+│           ├── v4.3.2
+│           ├── v4.4.0
+│           ├── v4.4.1
+│           ├── v4.4.2
+│           ├── v4.4.3
+│           ├── v4.5.0
+│           ├── v4.5.1
+│           ├── v4.5.2
+│           ├── v4.5.3
+│           ├── v4.6.0
+│           ├── v4.6.1
+│           ├── v4.6.2
+│           ├── v4.6.3
+│           ├── v4.6.4
+│           ├── v4.7.0
+│           ├── v4.7.1
+│           ├── v4.7.2
+│           ├── v4.7.3
+│           ├── v7.2.11
+│           └── v7.2.13
+├── .github
+│   ├── dependabot.yml
+│   ├── funding-octocat.svg
+│   ├── FUNDING.yml
+│   ├── ISSUE_TEMPLATE
+│   │   ├── BUG_REPORT.yml
+│   │   ├── BUILD_ERROR.yml
+│   │   ├── config.yml
+│   │   └── FEATURE_REQUEST.yml
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows
+│       ├── build-android-release.yml
+│       ├── build-android.yml
+│       ├── build-ios.yml
+│       ├── compress-images.yml
+│       ├── update-lockfiles.yml
+│       ├── validate-android.yml
+│       ├── validate-cpp.yml
+│       ├── validate-ios.yml
+│       └── validate-js.yml
+├── .gitignore
+├── ios -> package/ios
+├── LICENSE
+├── package
+│   ├── android
+│   │   ├── build.gradle
+│   │   ├── CMakeLists.txt
+│   │   ├── .editorconfig
+│   │   ├── gradle
+│   │   │   └── wrapper
+│   │   │       ├── gradle-wrapper.jar
+│   │   │       └── gradle-wrapper.properties
+│   │   ├── gradle.properties
+│   │   ├── gradlew
+│   │   ├── gradlew.bat
+│   │   ├── .project
+│   │   ├── README.md
+│   │   ├── .settings
+│   │   │   └── org.eclipse.buildship.core.prefs
+│   │   ├── settings.gradle
+│   │   └── src
+│   │       ├── hasNamespace
+│   │       │   └── AndroidManifest.xml
+│   │       └── main
+│   │           ├── AndroidManifest.xml
+│   │           ├── cpp
+│   │           │   ├── frameprocessors
+│   │           │   │   ├── FrameHostObject.cpp
+│   │           │   │   ├── FrameHostObject.h
+│   │           │   │   ├── FrameProcessorPluginHostObject.cpp
+│   │           │   │   ├── FrameProcessorPluginHostObject.h
+│   │           │   │   ├── java-bindings
+│   │           │   │   │   ├── JFrame.cpp
+│   │           │   │   │   ├── JFrame.h
+│   │           │   │   │   ├── JFrameProcessor.cpp
+│   │           │   │   │   ├── JFrameProcessor.h
+│   │           │   │   │   ├── JFrameProcessorPlugin.cpp
+│   │           │   │   │   ├── JFrameProcessorPlugin.h
+│   │           │   │   │   ├── JJSUnionValue.h
+│   │           │   │   │   ├── JOrientation.h
+│   │           │   │   │   ├── JPixelFormat.h
+│   │           │   │   │   ├── JSharedArray.cpp
+│   │           │   │   │   ├── JSharedArray.h
+│   │           │   │   │   ├── JVisionCameraProxy.cpp
+│   │           │   │   │   ├── JVisionCameraProxy.h
+│   │           │   │   │   ├── JVisionCameraScheduler.cpp
+│   │           │   │   │   └── JVisionCameraScheduler.h
+│   │           │   │   ├── JSIJNIConversion.cpp
+│   │           │   │   ├── JSIJNIConversion.h
+│   │           │   │   ├── VisionCameraProxy.cpp
+│   │           │   │   └── VisionCameraProxy.h
+│   │           │   ├── MutableJByteBuffer.cpp
+│   │           │   ├── MutableJByteBuffer.h
+│   │           │   ├── MutableRawBuffer.h
+│   │           │   └── VisionCamera.cpp
+│   │           └── java
+│   │               └── com
+│   │                   └── mrousavy
+│   │                       └── camera
+│   │                           ├── core
+│   │                           │   ├── CameraConfiguration.kt
+│   │                           │   ├── CameraDeviceDetails.kt
+│   │                           │   ├── CameraError.kt
+│   │                           │   ├── CameraQueues.kt
+│   │                           │   ├── CameraSession+Configuration.kt
+│   │                           │   ├── CameraSession+Focus.kt
+│   │                           │   ├── CameraSession.kt
+│   │                           │   ├── CameraSession+Photo.kt
+│   │                           │   ├── CameraSession+Video.kt
+│   │                           │   ├── CodeScannerFrame.kt
+│   │                           │   ├── CodeScannerPipeline.kt
+│   │                           │   ├── extensions
+│   │                           │   │   ├── CameraInfo+id.kt
+│   │                           │   │   ├── CameraSelector+byId.kt
+│   │                           │   │   ├── CameraSelector+withExtension.kt
+│   │                           │   │   ├── DynamicRange+isSDR.kt
+│   │                           │   │   ├── ImageAnalysis.Builder+setTargetFrameRate.kt
+│   │                           │   │   ├── ImageCapture+takePicture.kt
+│   │                           │   │   ├── ListenableFuture+await.kt
+│   │                           │   │   ├── ResolutionSelector+forSize.kt
+│   │                           │   │   ├── Size+aspectRatio.kt
+│   │                           │   │   ├── StateError+toCameraError.kt
+│   │                           │   │   └── VideoRecordEvent+toCameraError.kt
+│   │                           │   ├── FrameProcessorPipeline.kt
+│   │                           │   ├── MetadataProvider.kt
+│   │                           │   ├── OrientationManager.kt
+│   │                           │   ├── Photo.kt
+│   │                           │   ├── types
+│   │                           │   │   ├── AutoFocusSystem.kt
+│   │                           │   │   ├── CameraDeviceFormat.kt
+│   │                           │   │   ├── CodeScannerOptions.kt
+│   │                           │   │   ├── CodeType.kt
+│   │                           │   │   ├── DeviceType.kt
+│   │                           │   │   ├── Flash.kt
+│   │                           │   │   ├── .gitattributes
+│   │                           │   │   ├── HardwareLevel.kt
+│   │                           │   │   ├── JSUnionValue.kt
+│   │                           │   │   ├── Orientation.kt
+│   │                           │   │   ├── OutputOrientation.kt
+│   │                           │   │   ├── PermissionStatus.kt
+│   │                           │   │   ├── PixelFormat.kt
+│   │                           │   │   ├── Position.kt
+│   │                           │   │   ├── PreviewViewType.kt
+│   │                           │   │   ├── QualityBalance.kt
+│   │                           │   │   ├── RecordVideoOptions.kt
+│   │                           │   │   ├── ResizeMode.kt
+│   │                           │   │   ├── ShutterType.kt
+│   │                           │   │   ├── TakePhotoOptions.kt
+│   │                           │   │   ├── TakeSnapshotOptions.kt
+│   │                           │   │   ├── Torch.kt
+│   │                           │   │   ├── VideoCodec.kt
+│   │                           │   │   ├── VideoFileType.kt
+│   │                           │   │   ├── Video.kt
+│   │                           │   │   └── VideoStabilizationMode.kt
+│   │                           │   └── utils
+│   │                           │       ├── CamcorderProfileUtils.kt
+│   │                           │       ├── FileUtils.kt
+│   │                           │       ├── ImageFormatUtils.kt
+│   │                           │       ├── OutputFile.kt
+│   │                           │       └── runOnUiThread.kt
+│   │                           ├── frameprocessors
+│   │                           │   ├── Frame.java
+│   │                           │   ├── FrameProcessor.java
+│   │                           │   ├── FrameProcessorPlugin.java
+│   │                           │   ├── FrameProcessorPluginRegistry.java
+│   │                           │   ├── SharedArray.java
+│   │                           │   ├── VisionCameraInstaller.java
+│   │                           │   ├── VisionCameraProxy.kt
+│   │                           │   └── VisionCameraScheduler.java
+│   │                           └── react
+│   │                               ├── CameraDevicesManager.kt
+│   │                               ├── CameraPackage.kt
+│   │                               ├── CameraView+Events.kt
+│   │                               ├── CameraView+Focus.kt
+│   │                               ├── CameraView.kt
+│   │                               ├── CameraViewManager.kt
+│   │                               ├── CameraViewModule.kt
+│   │                               ├── CameraView+RecordVideo.kt
+│   │                               ├── CameraView+TakePhoto.kt
+│   │                               ├── CameraView+TakeSnapshot.kt
+│   │                               ├── Events.kt
+│   │                               ├── extensions
+│   │                               │   ├── List+toJSValue.kt
+│   │                               │   └── ViewGroup+installHierarchyFitter.kt
+│   │                               ├── FpsSampleCollector.kt
+│   │                               └── utils
+│   │                                   ├── CallbackPromise.kt
+│   │                                   └── withPromise.kt
+│   ├── app.plugin.js
+│   ├── babel.config.js
+│   ├── .clang-format
+│   ├── .eslintrc.js
+│   ├── .gitattributes
+│   ├── .gitignore
+│   ├── ios
+│   │   ├── Core
+│   │   │   ├── CameraConfiguration.swift
+│   │   │   ├── CameraError.swift
+│   │   │   ├── CameraQueues.swift
+│   │   │   ├── CameraSession+Audio.swift
+│   │   │   ├── CameraSession+CodeScanner.swift
+│   │   │   ├── CameraSession+Configuration.swift
+│   │   │   ├── CameraSessionDelegate.swift
+│   │   │   ├── CameraSession+Focus.swift
+│   │   │   ├── CameraSession+Location.swift
+│   │   │   ├── CameraSession+Orientation.swift
+│   │   │   ├── CameraSession+Photo.swift
+│   │   │   ├── CameraSession.swift
+│   │   │   ├── CameraSession+Video.swift
+│   │   │   ├── Extensions
+│   │   │   │   ├── AVAssetWriterInputPixelBufferAdaptor+initWithVideoSettings.swift
+│   │   │   │   ├── AVAudioSession+updateCategory.swift
+│   │   │   │   ├── AVCaptureConnection+orientation.swift
+│   │   │   │   ├── AVCaptureDevice.Format+dimensions.swift
+│   │   │   │   ├── AVCaptureDevice.Format+toDictionary.swift
+│   │   │   │   ├── AVCaptureDevice+isMultiCam.swift
+│   │   │   │   ├── AVCaptureDevice+minFocusDistance.swift
+│   │   │   │   ├── AVCaptureDevice+neutralZoom.swift
+│   │   │   │   ├── AVCaptureDevice+physicalDevices.swift
+│   │   │   │   ├── AVCaptureDevice+sensorOrientation.swift
+│   │   │   │   ├── AVCaptureDevice+toDictionary.swift
+│   │   │   │   ├── AVCaptureOutput+isMirrored.swift
+│   │   │   │   ├── AVCaptureOutput+orientation.swift
+│   │   │   │   ├── AVCaptureOutput+supportsVirtualRotation.swift
+│   │   │   │   ├── AVCaptureSession+synchronizeBuffer.swift
+│   │   │   │   ├── AVCaptureVideoDataOutput+findPixelFormat.swift
+│   │   │   │   ├── AVCaptureVideoDataOutput+pixelFormat.swift
+│   │   │   │   ├── AVCaptureVideoDataOutput+recommendedVideoSettings.swift
+│   │   │   │   ├── AVFrameRateRange+includes.swift
+│   │   │   │   ├── CLLocation+iso6709String.swift
+│   │   │   │   ├── CLLocationManager+requestAccess.swift
+│   │   │   │   ├── CLLocation+toEXIF.swift
+│   │   │   │   ├── CMAccelerometerData+deviceOrientation.swift
+│   │   │   │   ├── CMSampleBuffer+copyWithTimestampOffset.swift
+│   │   │   │   ├── CMTime+inverted.swift
+│   │   │   │   ├── CMVideoDimensions+toCGSize.swift
+│   │   │   │   ├── Collection+safe.swift
+│   │   │   │   ├── FourCharCode+toString.swift
+│   │   │   │   └── UIApplication+interfaceOrientation.swift
+│   │   │   ├── LocationProvider.swift
+│   │   │   ├── MetadataProvider.swift
+│   │   │   ├── OrientationManager.swift
+│   │   │   ├── Parsers
+│   │   │   │   ├── AVAssetWriter.Status+descriptor.swift
+│   │   │   │   ├── AVAuthorizationStatus+descriptor.swift
+│   │   │   │   ├── AVCaptureDevice.DeviceType+physicalDeviceDescriptor.swift
+│   │   │   │   ├── AVCaptureDevice.FlashMode+descriptor.swift
+│   │   │   │   ├── AVCaptureDevice.Format.AutoFocusSystem+descriptor.swift
+│   │   │   │   ├── AVCaptureDevice.Position+descriptor.swift
+│   │   │   │   ├── AVCaptureDevice.TorchMode+descriptor.swift
+│   │   │   │   ├── AVCapturePhotoOutput.QualityPrioritization+descriptor.swift
+│   │   │   │   ├── AVFileType+descriptor.swift
+│   │   │   │   ├── AVMetadataObject.ObjectType+descriptor.swift
+│   │   │   │   ├── AVVideoCodecType+descriptor.swift
+│   │   │   │   ├── CLAuthorizationStatus+descriptor.swift
+│   │   │   │   └── EnumParserError.swift
+│   │   │   ├── PhotoCaptureDelegate.swift
+│   │   │   ├── PreviewView.swift
+│   │   │   ├── Recording
+│   │   │   │   ├── TimelineEvent.swift
+│   │   │   │   ├── Track.swift
+│   │   │   │   └── TrackTimeline.swift
+│   │   │   ├── RecordingSession.swift
+│   │   │   ├── Types
+│   │   │   │   ├── AutoFocusSystem.swift
+│   │   │   │   ├── CameraDeviceFormat.swift
+│   │   │   │   ├── CodeScannerOptions.swift
+│   │   │   │   ├── Flash.swift
+│   │   │   │   ├── HardwareLevel.swift
+│   │   │   │   ├── JSUnionValue.swift
+│   │   │   │   ├── Orientation.swift
+│   │   │   │   ├── OutputOrientation.swift
+│   │   │   │   ├── PixelFormat.swift
+│   │   │   │   ├── QualityBalance.swift
+│   │   │   │   ├── RecordVideoOptions.swift
+│   │   │   │   ├── ResizeMode.swift
+│   │   │   │   ├── ShutterType.swift
+│   │   │   │   ├── TakePhotoOptions.swift
+│   │   │   │   ├── TakeSnapshotOptions.swift
+│   │   │   │   ├── Torch.swift
+│   │   │   │   ├── VideoStabilizationMode.swift
+│   │   │   │   └── Video.swift
+│   │   │   └── Utils
+│   │   │       ├── FileUtils.swift
+│   │   │       ├── GlobalReferenceHolder.swift
+│   │   │       └── VisionLogger.swift
+│   │   ├── FrameProcessors
+│   │   │   ├── Frame.h
+│   │   │   ├── FrameHostObject.h
+│   │   │   ├── FrameHostObject.mm
+│   │   │   ├── Frame.m
+│   │   │   ├── FrameProcessor.h
+│   │   │   ├── FrameProcessor.mm
+│   │   │   ├── FrameProcessorPlugin.h
+│   │   │   ├── FrameProcessorPluginHostObject.h
+│   │   │   ├── FrameProcessorPluginHostObject.mm
+│   │   │   ├── FrameProcessorPlugin.m
+│   │   │   ├── FrameProcessorPluginRegistry.h
+│   │   │   ├── FrameProcessorPluginRegistry.m
+│   │   │   ├── JSINSObjectConversion.h
+│   │   │   ├── JSINSObjectConversion.mm
+│   │   │   ├── MutableRawBuffer.h
+│   │   │   ├── SharedArray.h
+│   │   │   ├── SharedArray.mm
+│   │   │   ├── UIImageOrientation+descriptor.h
+│   │   │   ├── VisionCameraInstaller.h
+│   │   │   ├── VisionCameraInstaller.mm
+│   │   │   ├── VisionCameraProxyDelegate.h
+│   │   │   ├── VisionCameraProxy.h
+│   │   │   ├── VisionCameraProxyHolder.h
+│   │   │   ├── VisionCameraProxyHolder.mm
+│   │   │   └── VisionCameraProxy.mm
+│   │   ├── React
+│   │   │   ├── CameraBridge.h
+│   │   │   ├── CameraDevicesManager.m
+│   │   │   ├── CameraDevicesManager.swift
+│   │   │   ├── CameraView+Focus.swift
+│   │   │   ├── CameraViewManager.m
+│   │   │   ├── CameraViewManager.swift
+│   │   │   ├── CameraViewManager+VisionCameraProxyDelegate.swift
+│   │   │   ├── CameraView+RecordVideo.swift
+│   │   │   ├── CameraView.swift
+│   │   │   ├── CameraView+TakePhoto.swift
+│   │   │   ├── CameraView+TakeSnapshot.swift
+│   │   │   ├── CameraView+Zoom.swift
+│   │   │   ├── FpsSampleCollectorDelegate.swift
+│   │   │   ├── FpsSampleCollector.swift
+│   │   │   ├── Snapshot.swift
+│   │   │   └── Utils
+│   │   │       ├── Callback.swift
+│   │   │       ├── MakeReactError.swift
+│   │   │       └── Promise.swift
+│   │   ├── README.md
+│   │   ├── .swiftformat
+│   │   ├── .swiftlint.yml
+│   │   └── .swift-version
+│   ├── lib
+│   │   ├── commonjs
+│   │   │   ├── CameraDevices.js
+│   │   │   ├── CameraDevices.js.map
+│   │   │   ├── CameraError.js
+│   │   │   ├── CameraError.js.map
+│   │   │   ├── Camera.js
+│   │   │   ├── Camera.js.map
+│   │   │   ├── dependencies
+│   │   │   │   ├── ModuleProxy.js
+│   │   │   │   ├── ModuleProxy.js.map
+│   │   │   │   ├── ReanimatedProxy.js
+│   │   │   │   ├── ReanimatedProxy.js.map
+│   │   │   │   ├── SkiaProxy.js
+│   │   │   │   ├── SkiaProxy.js.map
+│   │   │   │   ├── WorkletsProxy.js
+│   │   │   │   └── WorkletsProxy.js.map
+│   │   │   ├── devices
+│   │   │   │   ├── getCameraDevice.js
+│   │   │   │   ├── getCameraDevice.js.map
+│   │   │   │   ├── getCameraFormat.js
+│   │   │   │   ├── getCameraFormat.js.map
+│   │   │   │   ├── Templates.js
+│   │   │   │   └── Templates.js.map
+│   │   │   ├── expo-plugin
+│   │   │   │   ├── @types.js
+│   │   │   │   ├── @types.js.map
+│   │   │   │   ├── withAndroidMLKitVisionModel.js
+│   │   │   │   ├── withAndroidMLKitVisionModel.js.map
+│   │   │   │   ├── withEnableFrameProcessorsAndroid.js
+│   │   │   │   ├── withEnableFrameProcessorsAndroid.js.map
+│   │   │   │   ├── withEnableFrameProcessorsIOS.js
+│   │   │   │   ├── withEnableFrameProcessorsIOS.js.map
+│   │   │   │   ├── withEnableLocationIOS.js
+│   │   │   │   ├── withEnableLocationIOS.js.map
+│   │   │   │   ├── withVisionCamera.js
+│   │   │   │   ├── withVisionCamera.js.map
+│   │   │   │   ├── writeToPodfile.js
+│   │   │   │   └── writeToPodfile.js.map
+│   │   │   ├── FpsGraph.js
+│   │   │   ├── FpsGraph.js.map
+│   │   │   ├── frame-processors
+│   │   │   │   ├── FrameProcessorsUnavailableError.js
+│   │   │   │   ├── FrameProcessorsUnavailableError.js.map
+│   │   │   │   ├── runAsync.js
+│   │   │   │   ├── runAsync.js.map
+│   │   │   │   ├── runAtTargetFps.js
+│   │   │   │   ├── runAtTargetFps.js.map
+│   │   │   │   ├── throwErrorOnJS.js
+│   │   │   │   ├── throwErrorOnJS.js.map
+│   │   │   │   ├── VisionCameraProxy.js
+│   │   │   │   ├── VisionCameraProxy.js.map
+│   │   │   │   ├── withFrameRefCounting.js
+│   │   │   │   └── withFrameRefCounting.js.map
+│   │   │   ├── hooks
+│   │   │   │   ├── useCameraDevice.js
+│   │   │   │   ├── useCameraDevice.js.map
+│   │   │   │   ├── useCameraDevices.js
+│   │   │   │   ├── useCameraDevices.js.map
+│   │   │   │   ├── useCameraFormat.js
+│   │   │   │   ├── useCameraFormat.js.map
+│   │   │   │   ├── useCameraPermission.js
+│   │   │   │   ├── useCameraPermission.js.map
+│   │   │   │   ├── useCodeScanner.js
+│   │   │   │   ├── useCodeScanner.js.map
+│   │   │   │   ├── useFrameProcessor.js
+│   │   │   │   └── useFrameProcessor.js.map
+│   │   │   ├── index.js
+│   │   │   ├── index.js.map
+│   │   │   ├── JSIHelper.js
+│   │   │   ├── JSIHelper.js.map
+│   │   │   ├── NativeCameraModule.js
+│   │   │   ├── NativeCameraModule.js.map
+│   │   │   ├── NativeCameraView.js
+│   │   │   ├── NativeCameraView.js.map
+│   │   │   ├── RotationHelper.js
+│   │   │   ├── RotationHelper.js.map
+│   │   │   ├── skia
+│   │   │   │   ├── SkiaCameraCanvas.js
+│   │   │   │   ├── SkiaCameraCanvas.js.map
+│   │   │   │   ├── useSkiaFrameProcessor.js
+│   │   │   │   └── useSkiaFrameProcessor.js.map
+│   │   │   └── types
+│   │   │       ├── CameraDevice.js
+│   │   │       ├── CameraDevice.js.map
+│   │   │       ├── CameraProps.js
+│   │   │       ├── CameraProps.js.map
+│   │   │       ├── CodeScanner.js
+│   │   │       ├── CodeScanner.js.map
+│   │   │       ├── Frame.js
+│   │   │       ├── Frame.js.map
+│   │   │       ├── Orientation.js
+│   │   │       ├── Orientation.js.map
+│   │   │       ├── OutputOrientation.js
+│   │   │       ├── OutputOrientation.js.map
+│   │   │       ├── PhotoFile.js
+│   │   │       ├── PhotoFile.js.map
+│   │   │       ├── PixelFormat.js
+│   │   │       ├── PixelFormat.js.map
+│   │   │       ├── Point.js
+│   │   │       ├── Point.js.map
+│   │   │       ├── Snapshot.js
+│   │   │       ├── Snapshot.js.map
+│   │   │       ├── TemporaryFile.js
+│   │   │       ├── TemporaryFile.js.map
+│   │   │       ├── VideoFile.js
+│   │   │       └── VideoFile.js.map
+│   │   ├── module
+│   │   │   ├── CameraDevices.js
+│   │   │   ├── CameraDevices.js.map
+│   │   │   ├── CameraError.js
+│   │   │   ├── CameraError.js.map
+│   │   │   ├── Camera.js
+│   │   │   ├── Camera.js.map
+│   │   │   ├── dependencies
+│   │   │   │   ├── ModuleProxy.js
+│   │   │   │   ├── ModuleProxy.js.map
+│   │   │   │   ├── ReanimatedProxy.js
+│   │   │   │   ├── ReanimatedProxy.js.map
+│   │   │   │   ├── SkiaProxy.js
+│   │   │   │   ├── SkiaProxy.js.map
+│   │   │   │   ├── WorkletsProxy.js
+│   │   │   │   └── WorkletsProxy.js.map
+│   │   │   ├── devices
+│   │   │   │   ├── getCameraDevice.js
+│   │   │   │   ├── getCameraDevice.js.map
+│   │   │   │   ├── getCameraFormat.js
+│   │   │   │   ├── getCameraFormat.js.map
+│   │   │   │   ├── Templates.js
+│   │   │   │   └── Templates.js.map
+│   │   │   ├── expo-plugin
+│   │   │   │   ├── @types.js
+│   │   │   │   ├── @types.js.map
+│   │   │   │   ├── withAndroidMLKitVisionModel.js
+│   │   │   │   ├── withAndroidMLKitVisionModel.js.map
+│   │   │   │   ├── withEnableFrameProcessorsAndroid.js
+│   │   │   │   ├── withEnableFrameProcessorsAndroid.js.map
+│   │   │   │   ├── withEnableFrameProcessorsIOS.js
+│   │   │   │   ├── withEnableFrameProcessorsIOS.js.map
+│   │   │   │   ├── withEnableLocationIOS.js
+│   │   │   │   ├── withEnableLocationIOS.js.map
+│   │   │   │   ├── withVisionCamera.js
+│   │   │   │   ├── withVisionCamera.js.map
+│   │   │   │   ├── writeToPodfile.js
+│   │   │   │   └── writeToPodfile.js.map
+│   │   │   ├── FpsGraph.js
+│   │   │   ├── FpsGraph.js.map
+│   │   │   ├── frame-processors
+│   │   │   │   ├── FrameProcessorsUnavailableError.js
+│   │   │   │   ├── FrameProcessorsUnavailableError.js.map
+│   │   │   │   ├── runAsync.js
+│   │   │   │   ├── runAsync.js.map
+│   │   │   │   ├── runAtTargetFps.js
+│   │   │   │   ├── runAtTargetFps.js.map
+│   │   │   │   ├── throwErrorOnJS.js
+│   │   │   │   ├── throwErrorOnJS.js.map
+│   │   │   │   ├── VisionCameraProxy.js
+│   │   │   │   ├── VisionCameraProxy.js.map
+│   │   │   │   ├── withFrameRefCounting.js
+│   │   │   │   └── withFrameRefCounting.js.map
+│   │   │   ├── hooks
+│   │   │   │   ├── useCameraDevice.js
+│   │   │   │   ├── useCameraDevice.js.map
+│   │   │   │   ├── useCameraDevices.js
+│   │   │   │   ├── useCameraDevices.js.map
+│   │   │   │   ├── useCameraFormat.js
+│   │   │   │   ├── useCameraFormat.js.map
+│   │   │   │   ├── useCameraPermission.js
+│   │   │   │   ├── useCameraPermission.js.map
+│   │   │   │   ├── useCodeScanner.js
+│   │   │   │   ├── useCodeScanner.js.map
+│   │   │   │   ├── useFrameProcessor.js
+│   │   │   │   └── useFrameProcessor.js.map
+│   │   │   ├── index.js
+│   │   │   ├── index.js.map
+│   │   │   ├── JSIHelper.js
+│   │   │   ├── JSIHelper.js.map
+│   │   │   ├── NativeCameraModule.js
+│   │   │   ├── NativeCameraModule.js.map
+│   │   │   ├── NativeCameraView.js
+│   │   │   ├── NativeCameraView.js.map
+│   │   │   ├── RotationHelper.js
+│   │   │   ├── RotationHelper.js.map
+│   │   │   ├── skia
+│   │   │   │   ├── SkiaCameraCanvas.js
+│   │   │   │   ├── SkiaCameraCanvas.js.map
+│   │   │   │   ├── useSkiaFrameProcessor.js
+│   │   │   │   └── useSkiaFrameProcessor.js.map
+│   │   │   └── types
+│   │   │       ├── CameraDevice.js
+│   │   │       ├── CameraDevice.js.map
+│   │   │       ├── CameraProps.js
+│   │   │       ├── CameraProps.js.map
+│   │   │       ├── CodeScanner.js
+│   │   │       ├── CodeScanner.js.map
+│   │   │       ├── Frame.js
+│   │   │       ├── Frame.js.map
+│   │   │       ├── Orientation.js
+│   │   │       ├── Orientation.js.map
+│   │   │       ├── OutputOrientation.js
+│   │   │       ├── OutputOrientation.js.map
+│   │   │       ├── PhotoFile.js
+│   │   │       ├── PhotoFile.js.map
+│   │   │       ├── PixelFormat.js
+│   │   │       ├── PixelFormat.js.map
+│   │   │       ├── Point.js
+│   │   │       ├── Point.js.map
+│   │   │       ├── Snapshot.js
+│   │   │       ├── Snapshot.js.map
+│   │   │       ├── TemporaryFile.js
+│   │   │       ├── TemporaryFile.js.map
+│   │   │       ├── VideoFile.js
+│   │   │       └── VideoFile.js.map
+│   │   └── typescript
+│   │       ├── CameraDevices.d.ts
+│   │       ├── CameraDevices.d.ts.map
+│   │       ├── Camera.d.ts
+│   │       ├── Camera.d.ts.map
+│   │       ├── CameraError.d.ts
+│   │       ├── CameraError.d.ts.map
+│   │       ├── dependencies
+│   │       │   ├── ModuleProxy.d.ts
+│   │       │   ├── ModuleProxy.d.ts.map
+│   │       │   ├── ReanimatedProxy.d.ts
+│   │       │   ├── ReanimatedProxy.d.ts.map
+│   │       │   ├── SkiaProxy.d.ts
+│   │       │   ├── SkiaProxy.d.ts.map
+│   │       │   ├── WorkletsProxy.d.ts
+│   │       │   └── WorkletsProxy.d.ts.map
+│   │       ├── devices
+│   │       │   ├── getCameraDevice.d.ts
+│   │       │   ├── getCameraDevice.d.ts.map
+│   │       │   ├── getCameraFormat.d.ts
+│   │       │   ├── getCameraFormat.d.ts.map
+│   │       │   ├── Templates.d.ts
+│   │       │   └── Templates.d.ts.map
+│   │       ├── expo-plugin
+│   │       │   ├── @types.d.ts
+│   │       │   ├── @types.d.ts.map
+│   │       │   ├── withAndroidMLKitVisionModel.d.ts
+│   │       │   ├── withAndroidMLKitVisionModel.d.ts.map
+│   │       │   ├── withEnableFrameProcessorsAndroid.d.ts
+│   │       │   ├── withEnableFrameProcessorsAndroid.d.ts.map
+│   │       │   ├── withEnableFrameProcessorsIOS.d.ts
+│   │       │   ├── withEnableFrameProcessorsIOS.d.ts.map
+│   │       │   ├── withEnableLocationIOS.d.ts
+│   │       │   ├── withEnableLocationIOS.d.ts.map
+│   │       │   ├── withVisionCamera.d.ts
+│   │       │   ├── withVisionCamera.d.ts.map
+│   │       │   ├── writeToPodfile.d.ts
+│   │       │   └── writeToPodfile.d.ts.map
+│   │       ├── FpsGraph.d.ts
+│   │       ├── FpsGraph.d.ts.map
+│   │       ├── frame-processors
+│   │       │   ├── FrameProcessorsUnavailableError.d.ts
+│   │       │   ├── FrameProcessorsUnavailableError.d.ts.map
+│   │       │   ├── runAsync.d.ts
+│   │       │   ├── runAsync.d.ts.map
+│   │       │   ├── runAtTargetFps.d.ts
+│   │       │   ├── runAtTargetFps.d.ts.map
+│   │       │   ├── throwErrorOnJS.d.ts
+│   │       │   ├── throwErrorOnJS.d.ts.map
+│   │       │   ├── VisionCameraProxy.d.ts
+│   │       │   ├── VisionCameraProxy.d.ts.map
+│   │       │   ├── withFrameRefCounting.d.ts
+│   │       │   └── withFrameRefCounting.d.ts.map
+│   │       ├── hooks
+│   │       │   ├── useCameraDevice.d.ts
+│   │       │   ├── useCameraDevice.d.ts.map
+│   │       │   ├── useCameraDevices.d.ts
+│   │       │   ├── useCameraDevices.d.ts.map
+│   │       │   ├── useCameraFormat.d.ts
+│   │       │   ├── useCameraFormat.d.ts.map
+│   │       │   ├── useCameraPermission.d.ts
+│   │       │   ├── useCameraPermission.d.ts.map
+│   │       │   ├── useCodeScanner.d.ts
+│   │       │   ├── useCodeScanner.d.ts.map
+│   │       │   ├── useFrameProcessor.d.ts
+│   │       │   └── useFrameProcessor.d.ts.map
+│   │       ├── index.d.ts
+│   │       ├── index.d.ts.map
+│   │       ├── JSIHelper.d.ts
+│   │       ├── JSIHelper.d.ts.map
+│   │       ├── NativeCameraModule.d.ts
+│   │       ├── NativeCameraModule.d.ts.map
+│   │       ├── NativeCameraView.d.ts
+│   │       ├── NativeCameraView.d.ts.map
+│   │       ├── RotationHelper.d.ts
+│   │       ├── RotationHelper.d.ts.map
+│   │       ├── skia
+│   │       │   ├── SkiaCameraCanvas.d.ts
+│   │       │   ├── SkiaCameraCanvas.d.ts.map
+│   │       │   ├── useSkiaFrameProcessor.d.ts
+│   │       │   └── useSkiaFrameProcessor.d.ts.map
+│   │       └── types
+│   │           ├── CameraDevice.d.ts
+│   │           ├── CameraDevice.d.ts.map
+│   │           ├── CameraProps.d.ts
+│   │           ├── CameraProps.d.ts.map
+│   │           ├── CodeScanner.d.ts
+│   │           ├── CodeScanner.d.ts.map
+│   │           ├── Frame.d.ts
+│   │           ├── Frame.d.ts.map
+│   │           ├── Orientation.d.ts
+│   │           ├── Orientation.d.ts.map
+│   │           ├── OutputOrientation.d.ts
+│   │           ├── OutputOrientation.d.ts.map
+│   │           ├── PhotoFile.d.ts
+│   │           ├── PhotoFile.d.ts.map
+│   │           ├── PixelFormat.d.ts
+│   │           ├── PixelFormat.d.ts.map
+│   │           ├── Point.d.ts
+│   │           ├── Point.d.ts.map
+│   │           ├── Snapshot.d.ts
+│   │           ├── Snapshot.d.ts.map
+│   │           ├── TemporaryFile.d.ts
+│   │           ├── TemporaryFile.d.ts.map
+│   │           ├── VideoFile.d.ts
+│   │           └── VideoFile.d.ts.map
+│   ├── package.json
+│   ├── react-native.config.js
+│   ├── scripts
+│   │   ├── bootstrap.js
+│   │   ├── check-all.sh
+│   │   ├── clang-format.sh
+│   │   ├── clean-android.sh
+│   │   ├── clean-ios.sh
+│   │   ├── clean-js.sh
+│   │   ├── ktlint.sh
+│   │   ├── swiftformat.sh
+│   │   └── swiftlint.sh
+│   ├── src
+│   │   ├── CameraDevices.ts
+│   │   ├── CameraError.ts
+│   │   ├── Camera.tsx
+│   │   ├── dependencies
+│   │   │   ├── ModuleProxy.ts
+│   │   │   ├── ReanimatedProxy.ts
+│   │   │   ├── SkiaProxy.ts
+│   │   │   └── WorkletsProxy.ts
+│   │   ├── devices
+│   │   │   ├── getCameraDevice.ts
+│   │   │   ├── getCameraFormat.ts
+│   │   │   └── Templates.ts
+│   │   ├── expo-plugin
+│   │   │   ├── @types.ts
+│   │   │   ├── withAndroidMLKitVisionModel.ts
+│   │   │   ├── withEnableFrameProcessorsAndroid.ts
+│   │   │   ├── withEnableFrameProcessorsIOS.ts
+│   │   │   ├── withEnableLocationIOS.ts
+│   │   │   ├── withVisionCamera.ts
+│   │   │   └── writeToPodfile.ts
+│   │   ├── FpsGraph.tsx
+│   │   ├── frame-processors
+│   │   │   ├── FrameProcessorsUnavailableError.ts
+│   │   │   ├── runAsync.ts
+│   │   │   ├── runAtTargetFps.ts
+│   │   │   ├── throwErrorOnJS.ts
+│   │   │   ├── VisionCameraProxy.ts
+│   │   │   └── withFrameRefCounting.ts
+│   │   ├── hooks
+│   │   │   ├── useCameraDevices.ts
+│   │   │   ├── useCameraDevice.ts
+│   │   │   ├── useCameraFormat.ts
+│   │   │   ├── useCameraPermission.ts
+│   │   │   ├── useCodeScanner.ts
+│   │   │   └── useFrameProcessor.ts
+│   │   ├── index.ts
+│   │   ├── JSIHelper.ts
+│   │   ├── NativeCameraModule.ts
+│   │   ├── NativeCameraView.ts
+│   │   ├── RotationHelper.ts
+│   │   ├── skia
+│   │   │   ├── SkiaCameraCanvas.tsx
+│   │   │   └── useSkiaFrameProcessor.ts
+│   │   └── types
+│   │       ├── CameraDevice.ts
+│   │       ├── CameraProps.ts
+│   │       ├── CodeScanner.ts
+│   │       ├── Frame.ts
+│   │       ├── Orientation.ts
+│   │       ├── OutputOrientation.ts
+│   │       ├── PhotoFile.ts
+│   │       ├── PixelFormat.ts
+│   │       ├── Point.ts
+│   │       ├── Snapshot.ts
+│   │       ├── TemporaryFile.ts
+│   │       └── VideoFile.ts
+│   ├── tsconfig.json
+│   └── VisionCamera.podspec
+├── package.json
+├── .prettierrc.js
+├── react-native.config.js
+├── README.md
+├── src -> package/src
+├── tea.yaml
+└── VisionCamera.podspec -> package/VisionCamera.podspec
+
+362 directories, 1574 files
