@@ -6,11 +6,9 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.events.Event
-import com.google.mlkit.vision.barcode.common.Barcode
 import com.mrousavy.camera.core.CameraError
 import com.mrousavy.camera.core.CodeScannerFrame
 import com.mrousavy.camera.core.UnknownCameraError
-import com.mrousavy.camera.core.types.CodeType
 import com.mrousavy.camera.core.types.Orientation
 import com.mrousavy.camera.core.types.ShutterType
 
@@ -136,35 +134,11 @@ fun CameraView.invokeOnBytesWrittenVideo(bytesWritten: Double) {
   this.sendEvent(event)
 }
 
-fun CameraView.invokeOnCodeScanned(barcodes: List<Barcode>, scannerFrame: CodeScannerFrame) {
+fun CameraView.invokeOnCodeScanned(barcodes: List<Any>, scannerFrame: CodeScannerFrame) {
+  // FOSS: Code scanning is disabled - ML Kit has been removed for F-Droid compliance
+  // This function now receives an empty list and does nothing meaningful
   val codes = Arguments.createArray()
-  barcodes.forEach { barcode ->
-    val code = Arguments.createMap()
-    val type = CodeType.fromBarcodeType(barcode.format)
-    code.putString("type", type.unionValue)
-    code.putString("value", barcode.rawValue)
-
-    barcode.boundingBox?.let { rect ->
-      val frame = Arguments.createMap()
-      frame.putInt("x", rect.left)
-      frame.putInt("y", rect.top)
-      frame.putInt("width", rect.right - rect.left)
-      frame.putInt("height", rect.bottom - rect.top)
-      code.putMap("frame", frame)
-    }
-
-    barcode.cornerPoints?.let { points ->
-      val corners = Arguments.createArray()
-      points.forEach { point ->
-        val pt = Arguments.createMap()
-        pt.putInt("x", point.x)
-        pt.putInt("y", point.y)
-        corners.pushMap(pt)
-      }
-      code.putArray("corners", corners)
-    }
-    codes.pushMap(code)
-  }
+  // In FOSS build, barcodes list will always be empty since CodeScannerPipeline is a stub
 
   val data = Arguments.createMap()
   data.putArray("codes", codes)

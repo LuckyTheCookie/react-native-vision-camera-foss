@@ -7,7 +7,6 @@ import android.view.Gravity
 import android.view.ScaleGestureDetector
 import android.widget.FrameLayout
 import androidx.camera.view.PreviewView
-import com.google.mlkit.vision.barcode.common.Barcode
 import com.mrousavy.camera.core.CameraConfiguration
 import com.mrousavy.camera.core.CameraSession
 import com.mrousavy.camera.core.CodeScannerFrame
@@ -343,7 +342,8 @@ class CameraView(context: Context) :
     invokeOnPreviewOrientationChanged(previewOrientation)
   }
 
-  override fun onCodeScanned(codes: List<Barcode>, scannerFrame: CodeScannerFrame) {
+  // FOSS: Changed from List<Barcode> to List<Any> since ML Kit is removed
+  override fun onCodeScanned(codes: List<Any>, scannerFrame: CodeScannerFrame) {
     invokeOnCodeScanned(codes, scannerFrame)
   }
 

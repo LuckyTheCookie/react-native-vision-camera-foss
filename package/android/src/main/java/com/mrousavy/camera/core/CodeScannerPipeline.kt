@@ -1,58 +1,37 @@
 package com.mrousavy.camera.core
 
 import android.util.Log
-import androidx.annotation.OptIn
-import androidx.camera.core.ExperimentalGetImage
 import androidx.camera.core.ImageAnalysis.Analyzer
 import androidx.camera.core.ImageProxy
-import com.google.mlkit.vision.barcode.BarcodeScanner
-import com.google.mlkit.vision.barcode.BarcodeScannerOptions
-import com.google.mlkit.vision.barcode.BarcodeScanning
-import com.google.mlkit.vision.common.InputImage
 import java.io.Closeable
 
+/**
+ * FOSS Version: CodeScannerPipeline stub
+ * 
+ * This is a placeholder implementation that does nothing.
+ * Google ML Kit barcode scanning has been removed for F-Droid compliance.
+ * 
+ * If you need barcode scanning functionality, consider using a Frame Processor
+ * with a FOSS-compatible library like ZXing.
+ */
 class CodeScannerPipeline(val configuration: CameraConfiguration.CodeScanner, val callback: CameraSession.Callback) :
   Closeable,
   Analyzer {
   companion object {
     private const val TAG = "CodeScannerPipeline"
   }
-  private val scanner: BarcodeScanner
 
   init {
-    val types = configuration.codeTypes.map { it.toBarcodeType() }
-    val barcodeScannerOptions = BarcodeScannerOptions.Builder()
-      .setBarcodeFormats(types[0], *types.toIntArray())
-      .build()
-    scanner = BarcodeScanning.getClient(barcodeScannerOptions)
+    Log.w(TAG, "CodeScanner is disabled in FOSS build - Google ML Kit has been removed for F-Droid compliance")
   }
 
-  @OptIn(ExperimentalGetImage::class)
   override fun analyze(imageProxy: ImageProxy) {
-    val image = imageProxy.image ?: throw InvalidImageTypeError()
-
-    try {
-      val inputImage = InputImage.fromMediaImage(image, imageProxy.imageInfo.rotationDegrees)
-      scanner.process(inputImage)
-        .addOnSuccessListener { barcodes ->
-          if (barcodes.isNotEmpty()) {
-            callback.onCodeScanned(barcodes, CodeScannerFrame(inputImage.width, inputImage.height))
-          }
-        }
-        .addOnFailureListener { error ->
-          Log.e(TAG, "Failed to process Image!", error)
-          callback.onError(error)
-        }
-        .addOnCompleteListener {
-          imageProxy.close()
-        }
-    } catch (e: Throwable) {
-      Log.e(TAG, "Failed to process Image!", e)
-      imageProxy.close()
-    }
+    // FOSS: No-op - ML Kit removed
+    // Simply close the image to avoid memory leaks
+    imageProxy.close()
   }
 
   override fun close() {
-    scanner.close()
+    // FOSS: No-op - nothing to close
   }
 }

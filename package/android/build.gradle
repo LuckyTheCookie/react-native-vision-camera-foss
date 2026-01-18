@@ -199,14 +199,8 @@ dependencies {
   // Some Coroutines extension functions
   implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0"
 
-  if (enableCodeScanner) {
-    // User enabled code-scanner, so we bundle the 2.4 MB model in the app.
-    implementation 'com.google.mlkit:barcode-scanning:17.3.0'
-  } else {
-    // Fall-back to just including the code for the CodeScanner to avoid the 2.4 MB bundle in the app.
-    // On devices with Google Play Services, this can also download the CodeScanner model on-demand.
-    implementation "com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1"
-  }
+  // FOSS: Code scanner functionality removed - Google ML Kit dependencies were removed for F-Droid compliance
+  // If you need barcode scanning, use a frame processor with a FOSS-compatible library like ZXing
 
   if (enableFrameProcessors) {
     // Frame Processor integration (optional)

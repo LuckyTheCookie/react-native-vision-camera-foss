@@ -1,9 +1,15 @@
 package com.mrousavy.camera.core.types
 
-import com.google.mlkit.vision.barcode.common.Barcode
-import com.mrousavy.camera.core.CodeTypeNotSupportedError
 import com.mrousavy.camera.core.InvalidTypeScriptUnionError
 
+/**
+ * FOSS Version: CodeType enum
+ * 
+ * Google ML Kit barcode constants have been replaced with simple integer IDs.
+ * This maintains API compatibility while removing the Google dependency.
+ * 
+ * Note: Code scanning functionality is disabled in FOSS builds.
+ */
 enum class CodeType(override val unionValue: String) : JSUnionValue {
   CODE_128("code-128"),
   CODE_39("code-39"),
@@ -20,42 +26,17 @@ enum class CodeType(override val unionValue: String) : JSUnionValue {
   DATA_MATRIX("data-matrix"),
   UNKNOWN("unknown");
 
-  fun toBarcodeType(): Int =
-    when (this) {
-      CODE_128 -> Barcode.FORMAT_CODE_128
-      CODE_39 -> Barcode.FORMAT_CODE_39
-      CODE_93 -> Barcode.FORMAT_CODE_93
-      CODABAR -> Barcode.FORMAT_CODABAR
-      EAN_13 -> Barcode.FORMAT_EAN_13
-      EAN_8 -> Barcode.FORMAT_EAN_8
-      ITF -> Barcode.FORMAT_ITF
-      UPC_E -> Barcode.FORMAT_UPC_E
-      UPC_A -> Barcode.FORMAT_UPC_A
-      QR -> Barcode.FORMAT_QR_CODE
-      PDF_417 -> Barcode.FORMAT_PDF417
-      AZTEC -> Barcode.FORMAT_AZTEC
-      DATA_MATRIX -> Barcode.FORMAT_DATA_MATRIX
-      UNKNOWN -> throw CodeTypeNotSupportedError(this.unionValue)
-    }
+  /**
+   * FOSS: Returns a simple integer ID instead of ML Kit Barcode.FORMAT_* constants.
+   * This is a no-op since code scanning is disabled, but maintains API compatibility.
+   */
+  fun toBarcodeType(): Int = ordinal
 
   companion object : JSUnionValue.Companion<CodeType> {
-    fun fromBarcodeType(barcodeType: Int): CodeType =
-      when (barcodeType) {
-        Barcode.FORMAT_CODE_128 -> CODE_128
-        Barcode.FORMAT_CODE_39 -> CODE_39
-        Barcode.FORMAT_CODE_93 -> CODE_93
-        Barcode.FORMAT_CODABAR -> CODABAR
-        Barcode.FORMAT_EAN_13 -> EAN_13
-        Barcode.FORMAT_EAN_8 -> EAN_8
-        Barcode.FORMAT_ITF -> ITF
-        Barcode.FORMAT_UPC_E -> UPC_E
-        Barcode.FORMAT_UPC_A -> UPC_A
-        Barcode.FORMAT_QR_CODE -> QR
-        Barcode.FORMAT_PDF417 -> PDF_417
-        Barcode.FORMAT_AZTEC -> AZTEC
-        Barcode.FORMAT_DATA_MATRIX -> DATA_MATRIX
-        else -> UNKNOWN
-      }
+    /**
+     * FOSS: Returns UNKNOWN since we can't actually scan barcodes without ML Kit.
+     */
+    fun fromBarcodeType(barcodeType: Int): CodeType = UNKNOWN
 
     override fun fromUnionValue(unionValue: String?): CodeType =
       when (unionValue) {
