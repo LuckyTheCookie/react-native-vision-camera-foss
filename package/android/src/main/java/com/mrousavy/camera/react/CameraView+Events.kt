@@ -6,7 +6,6 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.events.Event
-// FOSS: Removed ML Kit import
 import com.mrousavy.camera.core.CameraError
 import com.mrousavy.camera.core.CodeScannerFrame
 import com.mrousavy.camera.core.UnknownCameraError
@@ -136,8 +135,10 @@ fun CameraView.invokeOnBytesWrittenVideo(bytesWritten: Double) {
 }
 
 fun CameraView.invokeOnCodeScanned(barcodes: List<Any>, scannerFrame: CodeScannerFrame) {
+  // FOSS: Code scanning is disabled - ML Kit has been removed for F-Droid compliance
+  // This function now receives an empty list and does nothing meaningful
   val codes = Arguments.createArray()
-  // FOSS: barcodes list will always be empty (ML Kit removed)
+  // In FOSS build, barcodes list will always be empty since CodeScannerPipeline is a stub
 
   val data = Arguments.createMap()
   data.putArray("codes", codes)

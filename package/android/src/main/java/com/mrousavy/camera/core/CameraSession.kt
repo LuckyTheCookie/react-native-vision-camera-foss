@@ -21,7 +21,6 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import com.facebook.react.bridge.UiThreadUtil
-// FOSS: Removed ML Kit import
 import com.mrousavy.camera.core.extensions.await
 import com.mrousavy.camera.core.types.Orientation
 import com.mrousavy.camera.core.types.ShutterType
@@ -220,6 +219,7 @@ class CameraSession(internal val context: Context, internal val callback: Callba
     fun onShutter(type: ShutterType)
     fun onOutputOrientationChanged(outputOrientation: Orientation)
     fun onPreviewOrientationChanged(previewOrientation: Orientation)
+    // FOSS: Changed from List<Barcode> to List<Any> since ML Kit is removed
     fun onCodeScanned(codes: List<Any>, scannerFrame: CodeScannerFrame)
     fun onBytesWrittenVideo(bytesWritten: Double)
   }

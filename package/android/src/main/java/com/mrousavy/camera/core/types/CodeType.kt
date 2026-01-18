@@ -1,9 +1,15 @@
 package com.mrousavy.camera.core.types
 
-// FOSS: Removed ML Kit import
-import com.mrousavy.camera.core.CodeTypeNotSupportedError
 import com.mrousavy.camera.core.InvalidTypeScriptUnionError
 
+/**
+ * FOSS Version: CodeType enum
+ * 
+ * Google ML Kit barcode constants have been replaced with simple integer IDs.
+ * This maintains API compatibility while removing the Google dependency.
+ * 
+ * Note: Code scanning functionality is disabled in FOSS builds.
+ */
 enum class CodeType(override val unionValue: String) : JSUnionValue {
   CODE_128("code-128"),
   CODE_39("code-39"),
@@ -20,11 +26,16 @@ enum class CodeType(override val unionValue: String) : JSUnionValue {
   DATA_MATRIX("data-matrix"),
   UNKNOWN("unknown");
 
-  // FOSS: Returns ordinal instead of ML Kit constants
+  /**
+   * FOSS: Returns a simple integer ID instead of ML Kit Barcode.FORMAT_* constants.
+   * This is a no-op since code scanning is disabled, but maintains API compatibility.
+   */
   fun toBarcodeType(): Int = ordinal
 
   companion object : JSUnionValue.Companion<CodeType> {
-    // FOSS: Returns UNKNOWN since scanning is disabled
+    /**
+     * FOSS: Returns UNKNOWN since we can't actually scan barcodes without ML Kit.
+     */
     fun fromBarcodeType(barcodeType: Int): CodeType = UNKNOWN
 
     override fun fromUnionValue(unionValue: String?): CodeType =
