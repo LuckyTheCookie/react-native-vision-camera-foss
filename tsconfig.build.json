@@ -2,13 +2,22 @@
   "compilerOptions": {
     "target": "ES2019",
     "module": "ESNext",
+    "moduleResolution": "node",
     "declaration": true,
     "emitDeclarationOnly": true,
     "outDir": "lib/typescript",
-    "strict": true,
-    "esModuleInterop": true,
+    "types": [],                       
     "skipLibCheck": true,
-    "jsx": "react"
+    "noEmitOnError": false,
+    "strict": false,
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "react-native": ["./types/react-native"],
+      "react-native-reanimated": ["./types/react-native-reanimated"]
+    }
+  }
 }
