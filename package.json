@@ -45,29 +45,13 @@
     "typescript": "^5.6.2"
   },
   "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      [
-        "commonjs",
-        {
-          "esm": true
-        }
-      ],
-      [
-        "module",
-        {
-          "esm": true
-        }
-      ],
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
-  },
+  "source": "src",
+  "output": "lib",
+  "targets": [
+    ["commonjs", { "esm": true }],
+    ["module", { "esm": true }]
+  ]
+}
   "codegenConfig": {
     "name": "VisionCameraSpec",
     "type": "modules",
